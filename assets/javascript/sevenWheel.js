@@ -24,7 +24,7 @@ var padding = {top:20, right:40, bottom:0, left:0},
                     {"label":"IPAD PRO",  "value":7,  "question":"Which word is used for specifying an HTML tag that is inside another tag?"}, //nesting
                     {"label":"LAND",  "value":8,  "question":"Which side of the box is the third number in: margin:1px 1px 1px 1px; ?"}, //bottom
                     {"label":"MOTOROLLA",  "value":9,  "question":"What are the fonts that don't have serifs at the ends of letters called?"}, //sans-serif
-                    {"label":"BMW", "value":10, "question":"With CSS selectors, what character prefix should one use to specify a class?"}
+                    //{"label":"BMW", "value":10, "question":"With CSS selectors, what character prefix should one use to specify a class?"}
         ];
         var svg = d3.select('#chart')
             .append("svg")
@@ -150,3 +150,11 @@ var padding = {top:20, right:40, bottom:0, left:0},
             }
             return array;
         }
+
+        //(gd)create a function that will implement the lables of the different sections and those labes will be the links to the resturants 
+            // also do we want the background of the wheel section to change as well so that it a photo of the resturant 
+
+            // parameters 
+                // need event listeners 
+                // going to need to reference info in the locale storage and put it in the correct spot  
+                //
