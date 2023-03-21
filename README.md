@@ -1,2 +1,2 @@
 # cantdecide
-"Honey, what do you want for dinner?" "
+"Honey, what do you want for dinner?" 
