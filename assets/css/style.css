@@ -13,11 +13,23 @@
     --purple: #282846;
     /* Dark Colours */
 }
+
+
+.hero-section {
+    height: 500px; /*increase the height */
+    padding-top: 100px; /* increase the top padding */
+    padding-bottom: 100px; /* increase the bottom padding */
+    background-image: url("../images/sammyosa7.jpg") ;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
 /* COLOR IDEAS */
 
 /* ROUND CORNERS */
 /* BOX SHADOW GLOW */
-/* PRSUMABLY SOME FLEXBOX STUFF :'( */
+/* PReSUMABLY SOME FLEXBOX STUFF :'( */
 
 
 /* Button Hover! */
@@ -34,7 +46,28 @@ backgound-color: #FFFFC7
 color: #4B778D;
 color: #8FD9A8;
 color: #D2E69C;
-background-color: #282846;
+/* background-color: #282846; */
+
+/* Trying to centre button */
+header {
+    border: solid;
+    text-align: center;
+}
+
+.words {
+    text-align: center;
+}
+
+.but {
+    justify-content: center;
+    border: solid;
+    text-align: center;
+}
+
+.btn-primary {
+    text-align: center;
+    border: solid;
+}
 
 
 /* MeDiA qUeRiEs */
@@ -45,6 +78,7 @@ text{
     font-size:11px;
     pointer-events:none;
 }
+
 #chart{
     position:absolute;
     width:500px;
@@ -52,6 +86,7 @@ text{
     top:0;
     left:0;
 }
+
 #question{
     position: absolute;
     width:400px;
@@ -59,6 +94,7 @@ text{
     top:0;
     left:520px;
 }
+
 #question h1{
     font-size: 50px;
     font-weight: bold;

@@ -13,52 +13,100 @@
     
 
     <title>Can't Decide?</title>
+
 </head>
 <body>
 
-    
-    <!-- ADD NAV BAR (ABSOLUTELY ABOVE HEADER)-->
-    
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
-            aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarText">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item active mx-auto">
-                    <!-- NO HREF because current page, need to ask about hover operations -->
-                    <a class="nav-link">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item mx-auto">
-                    <a class="nav-link " href="#">Cuisine</a>
-                </li>
-                <li class="nav-item mx-auto">
-                    <a class="nav-link" href="#">Map</a>
-                </li>
-                <li class="nav-item mx-auto">
-                    <a class="nav-link" href="./contactUs.html">Contact</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
 
     <!-- ADD HEADER FOR "CAN'T DECIDE" -->
     <header>
-        <h1 id = "webTitle">Can't Decide?</h1>
+            <!-- We want a hero wrapping the header and subheader. -->
+    
+    <div class="container-fluid p-0">
+        
+        <div class="hero-section d-flex align-items-center">
+            <div class="container text-center">
+            
+            <h1 class="display-4"><strong>Can't Decide?</strong></h1>
+            <h2 id = "display-4"><strong>Make Date Night Easy</strong></h2>
+            <p class="lead"><em>No fuss, Just food</em></p>
+
+            <!-- <img src = "./assets/images/sammyosa3.jpg" alt="Image description" style=" position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;"> -->
+            <!-- <a class="btn btn-primary btn-lg" href="#" role="button">Learn More</a> -->
+            </div>
+        </div>
+    </div>
+        <!-- <h1 id = "webTitle">Can't Decide?</h1> -->
     
     <!-- ADD SUBHEADER -->
-        <h2 id = "subTitle">Make Date Night Easy</h2>
+        
 
         
     </header>
     <!-- ADD EXPLANATION FOR WEBSITE -->
-    <section>
-        <p>"Have you ever had trouble deciding where to eat? I have, and it lead to arguments with my signficant other, but that hasn't happened ever since we started using <strong>Can't Decide</strong>! We've never been happier, our wallets on the other hand..."</p>
+    <section class = words>
+        <p>Has this ever happened to you? Have you ever had trouble deciding where to eat? I have, and it lead to arguments with my signficant other, but that hasn't happened ever since we started using <strong>Can't Decide</strong>! We've never been happier, our wallets and belts on the other hand...</p>
     </section>
     <!-- ADD 6 (SIX) BOXES TO FILL IN CUSINE -->
     <div>
         
+        <div class = "but">
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                What are you feeling?
+            </button>
+        </div>
+            <!-- Modal -->
+            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="staticBackdropLabel">Tell us what you might be in the mood for</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <section class = input>
+                                <form action="action_page.php">
+                                    <label for="co"></label>
+                                    <input type="text" id="co" name="cusine" placeholder="Chinese...?">
+                                </form>
+                            </section>
+                            <section class = input>
+                                <form action="action_page.php">
+                                    <label for="co"></label>
+                                    <input type="text" id="co" name="cusine" placeholder="Italian...?">
+                                </form>
+                            </section>
+                            <section class = input>
+                                <form action="action_page.php">
+                                    <label for="co"></label>
+                                    <input type="text" id="co" name="cusine" placeholder="Greek...?">
+                                </form>
+                            </section>
+                            <section class = input>
+                                <form action="action_page.php">
+                                    <label for="co"></label>
+                                    <input type="text" id="co" name="cusine" placeholder="French...?">
+                                </form>
+                            </section>
+                            <section class = input>
+                                <form action="action_page.php">
+                                    <label for="co"></label>
+                                    <input type="text" id="co" name="cusine" placeholder="Mexican...?">
+                                </form>
+                            </section>
+                            <section class = input>
+                                <form action="action_page.php">
+                                    <label for="co"></label>
+                                    <input type="text" id="co" name="cusine" placeholder="Give Up...?">
+                                </form>
+                            </section>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary"><strong>GIVE ME FOOD</strong></button>
+                        </div>
         <!-- Button trigger modal -->
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
             What are you feeling?
@@ -114,12 +162,10 @@
                 </form>
                 </div>
             </div>
-        </div>
-    <!-- ADD START BUTTON: Will take us to next HTML -->
-    <section>
-        <button type = "button" id = "btn">GIVE ME FOOD</button>
-    </section>
-    <!--  -->
+            <section class = words>
+                <p>Can't decide is a revolutionary new app/webpage (not sure what we want to be called) that facilitates you and your loved ones in determining where you want to eat. You simply offer six (6) types of restuant and with our patented <strong><em>VIBE CHECK</em></strong> technology, our back-end programming will compare the vibe of those attending the meal outing and the cuisine options given to give you the perfect recommendation. The rest of the evening is up to you...</p>
+            </section>
+    </div>
 
 
 
