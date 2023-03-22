@@ -11,11 +11,6 @@ var userInput
 
 //spin wheel button (one on index one on wheel page)
 
-// wheel page
-    // ANIMATE WHEEL SPIN SOMEHOW
-    // link to the website when clicked on choice 
-
-
 // dayjs()
 
 // RANDOMIZE CHOICE
@@ -23,8 +18,9 @@ var userInput
 
 //set and get from local storage
     // choices that you selected 
+    // date and time 
 
-// contact page that links to githubs     
+   
 
 //Api
 //
