@@ -81,12 +81,12 @@ var padding = {top:20, right:40, bottom:0, left:0},
             picked = Math.round(data.length - (rotation % 360)/ps);
             picked = picked >= data.length ? (picked % data.length) : picked;
             //(ED) if this prohibits the wheel from being spun multiple times randomly, lets take it out.
-            if(oldpick.indexOf(picked) !== -1){
-                d3.select(this).call(spin);
-                return;
-            } else {
-                oldpick.push(picked);
-            }
+            // if(oldpick.indexOf(picked) !== -1){
+            //     d3.select(this).call(spin);
+            //     return;
+            // } else {
+            //     oldpick.push(picked);
+            // }
             rotation += 90 - Math.round(ps/2);
             vis.transition()
                 .duration(3000)
