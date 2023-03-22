@@ -80,6 +80,7 @@ var padding = {top:20, right:40, bottom:0, left:0},
             
             picked = Math.round(data.length - (rotation % 360)/ps);
             picked = picked >= data.length ? (picked % data.length) : picked;
+            //(ED) if this prohibits the wheel from being spun multiple times randomly, lets take it out.
             if(oldpick.indexOf(picked) !== -1){
                 d3.select(this).call(spin);
                 return;
@@ -93,26 +94,31 @@ var padding = {top:20, right:40, bottom:0, left:0},
                 .each("end", function(){
                     //mark question as seen
                     d3.select(".slice:nth-child(" + (picked + 1) + ") path")
-                        .attr("fill", "#111");
+                        //(ED) component to filling in old answers    
+                        // .attr("fill", "#111");
                     //populate question
-                    d3.select("#question h1")
-                        .text(data[picked].question);
+                    //(ED) this code effects the spinning animation. commenting this out will cause the animation to jump around when spinning for a new option
+                    // d3.select("#question h1")
+                    //     .text(data[picked].question);
+                    //(ED) This keeps the animation fluid
                     oldrotation = rotation;
               
                     /* Get the result value from object "data" */
                     console.log(data[picked].value)
               
                     /* Comment the below line for restrict spin to sngle time */
-                    //(ED) if this prohibits the wheel from being spun multiple times randomly, lets take it out.
+
                     container.on("click", spin);
                 });
         }
         //make arrow
+        
         svg.append("g")
             .attr("transform", "translate(" + (w + padding.left + padding.right) + "," + ((h/2)+padding.top) + ")")
             .append("path")
             .attr("d", "M-" + (r*.15) + ",0L0," + (r*.05) + "L0,-" + (r*.05) + "Z")
-            .style({"fill":"black"});
+            //(ED) component to filling in old answers
+            // .style({"fill":"black"});
         //draw spin circle
         container.append("circle")
             .attr("cx", 0)
@@ -144,6 +150,8 @@ var padding = {top:20, right:40, bottom:0, left:0},
                 console.log("works");
             } else {
                 //no support for crypto, get crappy random numbers
+                
+                //(ED) What is crypto referring to?
                 for(var i=0; i < 1000; i++){
                     array[i] = Math.floor(Math.random() * 100000) + 1;
                 }
