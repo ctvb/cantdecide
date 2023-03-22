@@ -107,7 +107,59 @@
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                             <button type="button" class="btn btn-primary"><strong>GIVE ME FOOD</strong></button>
                         </div>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+            What are you feeling?
+        </button>
+        
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
+                    <div class="modal-body">
+                        <form>
+                        <section class = input>
+        
+                                <label for="co"></label>
+                                <input type="text" id="co" name="cusine" placeholder="Chinese...?">
+                        </section>
+                        <section class = input>
+        
+                                <label for="co"></label>
+                                <input type="text" id="co" name="cusine" placeholder="Italian...?">
+                        </section>
+                        <section class = input>
+        
+                                <label for="co"></label>
+                                <input type="text" id="co" name="cusine" placeholder="Greek...?">
+                        </section>
+                        <section class = input>
+        
+                                <label for="co"></label>
+                                <input type="text" id="co" name="cusine" placeholder="French...?">
+                        </section>
+                        <section class = input>
+        
+                                <label for="co"></label>
+                                <input type="text" id="co" name="cusine" placeholder="Mexican...?">
+                            
+                        </section>
+                        <section class = input>
+                                <label for="co"></label>
+                                <input type="text" id="co" name="cusine" placeholder="Give Up...?">
+                        </section>
+                        
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" > Understood</button>
+                    </div>
+                </form>
                 </div>
             </div>
             <section class = words>
@@ -123,7 +175,10 @@
 <!-- Buttons at bottom/links for Contact US -->
 
 <!-- Scripts/API's -->
-
+<script
+src="https://code.jquery.com/jquery-3.6.4.min.js"
+integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+crossorigin="anonymous"></script>   
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
         integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
         crossorigin="anonymous"></script>
