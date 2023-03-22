@@ -22,12 +22,18 @@
 
 // function to set the inputs from the modal to local storage 
 let submitBtn = $(".btn-primary");
-
+let cuisineVal = []
     
     submitBtn.on("click",function(){
      $('form input[type=text]').each(function(){
-        console.log($(this).val());
-     })   
+    let foodType = $(this).val();
+        cuisineVal.push({
+            name:$(this).name,
+            value: foodType,
+        })
+     })
+       localStorage.cuisineVal = JSON.stringify(cuisineVal)
+       console.log(cuisineVal)
     })
 
 
