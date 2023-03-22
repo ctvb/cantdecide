@@ -37,7 +37,7 @@
                     <a class="nav-link" href="#">Map</a>
                 </li>
                 <li class="nav-item mx-auto">
-                    <a class="nav-link" href="#">Contact</a>
+                    <a class="nav-link" href="./contactUs.html">Contact</a>
                 </li>
             </ul>
         </div>
@@ -58,14 +58,40 @@
     </section>
     <!-- ADD 6 (SIX) BOXES TO FILL IN CUSINE -->
     <div>
-        <header>What Are You Feeling?</header>
+        
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+            What are you feeling?
+        </button>
+        
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Understood</button>
+                    </div>
+                </div>
+            </div>
+        
+        
+        <!-- <header>What Are You Feeling?</header>
         <section class = input>
             <form action="action_page.php">
                 <label for="co">Text can go here if we want
                 </label>
                 <input type="text" id="co" name="cusine" placeholder="Chinese...?">
             </form>
-        </section>
+        </section> -->
         <section class = input>
             <form action="action_page.php">
                 <label for="co"></label>
