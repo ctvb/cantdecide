@@ -26,7 +26,8 @@ let submitBtn = $(".btn-primary");
     
     submitBtn.on("click",function(){
      $('form input[type=text]').each(function(){
-        console.log($(this).val());
+    let foodType = $(this).val();
+    foodType.set
      })   
     })
 
