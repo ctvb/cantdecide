@@ -4,19 +4,133 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel = 'stylesheet' href="./assets/css/">
-    <title>Document</title>
+    
+    <!-- Links to stylesheet implementations -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+
+    <link rel = 'stylesheet' href="./assets/css/style.css">
+    
+
+    <title>Can't Decide?</title>
 </head>
 <body>
+
+    
     <!-- ADD NAV BAR (ABSOLUTELY ABOVE HEADER)-->
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+            aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item active mx-auto">
+                    <!-- NO HREF because current page, need to ask about hover operations -->
+                    <a class="nav-link">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item mx-auto">
+                    <a class="nav-link " href="#">Cuisine</a>
+                </li>
+                <li class="nav-item mx-auto">
+                    <a class="nav-link" href="#">Map</a>
+                </li>
+                <li class="nav-item mx-auto">
+                    <a class="nav-link" href="./contactUs.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
     <!-- ADD HEADER FOR "CAN'T DECIDE" -->
+    <header>
+        <h1 id = "webTitle">Can't Decide?</h1>
+    
     <!-- ADD SUBHEADER -->
+        <h2 id = "subTitle">Make Date Night Easy</h2>
+
+        
+    </header>
     <!-- ADD EXPLANATION FOR WEBSITE -->
+    <section>
+        <p>"Have you ever had trouble deciding where to eat? I have, and it lead to arguments with my signficant other, but that hasn't happened ever since we started using <strong>Can't Decide</strong>! We've never been happier, our wallets on the other hand..."</p>
+    </section>
     <!-- ADD 6 (SIX) BOXES TO FILL IN CUSINE -->
+    <div>
+        
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+            What are you feeling?
+        </button>
+        
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Understood</button>
+                    </div>
+                </div>
+            </div>
+        
+        
+        <!-- <header>What Are You Feeling?</header>
+        <section class = input>
+            <form action="action_page.php">
+                <label for="co">Text can go here if we want
+                </label>
+                <input type="text" id="co" name="cusine" placeholder="Chinese...?">
+            </form>
+        </section> -->
+        <section class = input>
+            <form action="action_page.php">
+                <label for="co"></label>
+                <input type="text" id="co" name="cusine" placeholder="Italian...?">
+            </form>
+        </section>
+        <section class = input>
+            <form action="action_page.php">
+                <label for="co"></label>
+                <input type="text" id="co" name="cusine" placeholder="Greek...?">
+            </form>
+        </section>
+        <section class = input>
+            <form action="action_page.php">
+                <label for="co"></label>
+                <input type="text" id="co" name="cusine" placeholder="French...?">
+            </form>
+        </section>
+        <section class = input>
+            <form action="action_page.php">
+                <label for="co"></label>
+                <input type="text" id="co" name="cusine" placeholder="Mexican...?">
+            </form>
+        </section>
+        <section class = input>
+            <form action="action_page.php">
+                <label for="co"></label>
+                <input type="text" id="co" name="cusine" placeholder="Give Up...?">
+            </form>
+        </section>
+    </div>
     <!-- ADD START BUTTON: Will take us to next HTML -->
+    <section>
+        <button type = "button" id = "btn">GIVE ME FOOD</button>
+    </section>
+    <!--  -->
 
 
-</body>
+
 
 
 
@@ -24,8 +138,15 @@
 
 <!-- Scripts/API's -->
 
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
     <script src = "./assets/javascript/script.js"></script>
 
 
+    </body>
 
-    </html>
+</html>
