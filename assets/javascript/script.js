@@ -1,5 +1,5 @@
 
-var userInput
+//var userInput
 
 //jquery selectors
 
@@ -20,7 +20,16 @@ var userInput
     // choices that you selected 
     // date and time 
 
-   
+// function to set the inputs from the modal to local storage 
+let submitBtn = $(".btn-primary");
+
+    
+    submitBtn.on("click",function(){
+     $('form input[type=text]').each(function(){
+        console.log($(this).val());
+     })   
+    })
+
 
 //Api
 //
