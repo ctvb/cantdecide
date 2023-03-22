@@ -1,4 +1,19 @@
-/* THE VAR THING FOR COLOUR OPTIONS */
+/* Colour Library */
+:root {
+    --yellow: #F7FD04;
+    --orange: #F9B208;
+    --dorange: #F98404;
+    --ddorange: #FC5404;
+    --lyellow: #FFFFC7;
+    /* Light Colours */
+    --teal: #28B5B5;
+    --grue: #4B778D;
+    --green: #8FD9A8;
+    --grellow: #D2E69C;
+    --purple: #282846;
+    /* Dark Colours */
+}
+
 /* COLOR IDEAS */
 
 /* ROUND CORNERS */
