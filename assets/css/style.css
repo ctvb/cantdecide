@@ -19,11 +19,10 @@
     height: 500px; /*increase the height */
     padding-top: 100px; /* increase the top padding */
     padding-bottom: 100px; /* increase the bottom padding */
-    background-image: url("../images/sammyosa7.jpg") ;
+    background-image: url("../images/sammyosa9.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
-
 
 /* COLOR IDEAS */
 
@@ -48,6 +47,10 @@ color: #8FD9A8;
 color: #D2E69C;
 /* background-color: #282846; */
 
+body {
+    /* background-color: var(--lyellow); */
+}
+
 /* Trying to centre button */
 header {
     border: solid;
@@ -56,6 +59,8 @@ header {
 
 .words {
     text-align: center;
+    margin: 50px;
+    padding: 20px;
 }
 
 .but {
