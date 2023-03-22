@@ -15,15 +15,17 @@ var padding = {top:20, right:40, bottom:0, left:0},
         //(ED) each of these labels need to be tied to entries in userInput. Do we need to make a specific variable for each userInput? or should we store all of them in an array and break them up later?
 
         var data = [
-                    {"label":"Dell LAPTOP",  "value":1,  "question":"What CSS property is used for specifying the area between the content and its border?"}, // padding
-                    {"label":"IMAC PRO",  "value":2,  "question":"What CSS property is used for changing the font?"}, //font-family
-                    {"label":"SUZUKI",  "value":3,  "question":"What CSS property is used for changing the color of text?"}, //color
-                    {"label":"HONDA",  "value":4,  "question":"What CSS property is used for changing the boldness of text?"}, //font-weight
-                    {"label":"FERRARI",  "value":5,  "question":"What CSS property is used for changing the size of text?"}, //font-size
-                    {"label":"APARTMENT",  "value":6,  "question":"What CSS property is used for changing the background color of a box?"}, //background-color
-                    {"label":"IPAD PRO",  "value":7,  "question":"Which word is used for specifying an HTML tag that is inside another tag?"}, //nesting
-                    {"label":"LAND",  "value":8,  "question":"Which side of the box is the third number in: margin:1px 1px 1px 1px; ?"}, //bottom
-                    {"label":"MOTOROLLA",  "value":9,  "question":"What are the fonts that don't have serifs at the ends of letters called?"}, //sans-serif
+                    //(ED) changed individual bespoke wheel labels to "choice x" and text properties changed. also commented out values 7-9.
+                    
+                    {"label":"Choice 1",  "value":1,  "question":"What CSS property is used for specifying the area between the content and its border?"}, // padding
+                    {"label":"Choice 2",  "value":2,  "question":"What CSS property is used for changing the font?"}, //font-family
+                    {"label":"Choice 3",  "value":3,  "question":"What CSS property is used for changing the color of text?"}, //color
+                    {"label":"Choice 4",  "value":4,  "question":"What CSS property is used for changing the boldness of text?"}, //font-weight
+                    {"label":"Choice 5",  "value":5,  "question":"What CSS property is used for changing the size of text?"}, //font-size
+                    {"label":"Choice 6",  "value":6,  "question":"What CSS property is used for changing the background color of a box?"}, //background-color
+                    // {"label":"IPAD PRO",  "value":7,  "question":"Which word is used for specifying an HTML tag that is inside another tag?"}, //nesting
+                    // {"label":"LAND",  "value":8,  "question":"Which side of the box is the third number in: margin:1px 1px 1px 1px; ?"}, //bottom
+                    // {"label":"MOTOROLLA",  "value":9,  "question":"What are the fonts that don't have serifs at the ends of letters called?"}, //sans-serif
                     //{"label":"BMW", "value":10, "question":"With CSS selectors, what character prefix should one use to specify a class?"}
         ];
         var svg = d3.select('#chart')
@@ -80,12 +82,13 @@ var padding = {top:20, right:40, bottom:0, left:0},
             
             picked = Math.round(data.length - (rotation % 360)/ps);
             picked = picked >= data.length ? (picked % data.length) : picked;
-            if(oldpick.indexOf(picked) !== -1){
-                d3.select(this).call(spin);
-                return;
-            } else {
-                oldpick.push(picked);
-            }
+            //(ED) if this prohibits the wheel from being spun multiple times randomly, lets take it out.
+            // if(oldpick.indexOf(picked) !== -1){
+            //     d3.select(this).call(spin);
+            //     return;
+            // } else {
+            //     oldpick.push(picked);
+            // }
             rotation += 90 - Math.round(ps/2);
             vis.transition()
                 .duration(3000)
@@ -93,26 +96,31 @@ var padding = {top:20, right:40, bottom:0, left:0},
                 .each("end", function(){
                     //mark question as seen
                     d3.select(".slice:nth-child(" + (picked + 1) + ") path")
-                        .attr("fill", "#111");
+                        //(ED) component to filling in old answers    
+                        // .attr("fill", "#111");
                     //populate question
-                    d3.select("#question h1")
-                        .text(data[picked].question);
+                    //(ED) this code effects the spinning animation. commenting this out will cause the animation to jump around when spinning for a new option
+                    // d3.select("#question h1")
+                    //     .text(data[picked].question);
+                    //(ED) This keeps the animation fluid
                     oldrotation = rotation;
               
                     /* Get the result value from object "data" */
                     console.log(data[picked].value)
               
                     /* Comment the below line for restrict spin to sngle time */
-                    //(ED) if this prohibits the wheel from being spun multiple times randomly, lets take it out.
+
                     container.on("click", spin);
                 });
         }
         //make arrow
+        
         svg.append("g")
             .attr("transform", "translate(" + (w + padding.left + padding.right) + "," + ((h/2)+padding.top) + ")")
             .append("path")
             .attr("d", "M-" + (r*.15) + ",0L0," + (r*.05) + "L0,-" + (r*.05) + "Z")
-            .style({"fill":"black"});
+            //(ED) component to filling in old answers
+            // .style({"fill":"black"});
         //draw spin circle
         container.append("circle")
             .attr("cx", 0)
@@ -144,6 +152,8 @@ var padding = {top:20, right:40, bottom:0, left:0},
                 console.log("works");
             } else {
                 //no support for crypto, get crappy random numbers
+                
+                //(ED) What is crypto referring to?
                 for(var i=0; i < 1000; i++){
                     array[i] = Math.floor(Math.random() * 100000) + 1;
                 }
