@@ -168,3 +168,15 @@ var padding = {top:20, right:40, bottom:0, left:0},
                 // need event listeners 
                 // going to need to reference info in the locale storage and put it in the correct spot  
                 //
+function accessMem() {
+var userFood = JSON.parse(localStorage.getItem(cuisineVal))
+if (!userFood) {
+return }
+for (let i = 0; i < userFood.length; i++) {
+    data.push({"label":userFood[i].value})
+    console.log(userFood[i])
+    console.log(data)
+}
+
+}
+accessMem()
