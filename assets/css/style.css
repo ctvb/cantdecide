@@ -16,7 +16,7 @@
 
 
 body {
-     background-color: var(--lyellow); 
+    background-color: var(--lyellow); 
 }
 
 /* BUTTONs */
@@ -48,6 +48,7 @@ header {
 #nap {
     justify-content: end;
     display: inline-block;
+    font-size: large;
 }
 
 /* LANDING PAGE STUFF */
@@ -111,8 +112,10 @@ color: #D2E69C;
 
 /* Trying to centre button */
 
-
-
+/* 
+.inout {
+    padding: 10px;
+} */
 
 
 
