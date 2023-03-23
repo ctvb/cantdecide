@@ -25,15 +25,18 @@ let submitBtn = $(".btn-under");
 let cuisineVal = []
     
     submitBtn.on("click",function(){
+    
      $('form input[type=text]').each(function(){
     let foodType = $(this).val();
         cuisineVal.push({
             name: this.name,
             value: foodType,
         })
+    console.log(this)
      })
        localStorage.setItem("cuisineVal", JSON.stringify(cuisineVal))
        console.log(cuisineVal)
+    console.log(this)
     })
 
 
