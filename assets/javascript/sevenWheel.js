@@ -17,12 +17,12 @@ var padding = {top:20, right:40, bottom:0, left:0},
         var data = [
                     //(ED) changed individual bespoke wheel labels to "choice x" and text properties changed. also commented out values 7-9.
                     
-                    {"label":"Choice 1",  "value":1,  "question":"What CSS property is used for specifying the area between the content and its border?"}, // padding
-                    {"label":"Choice 2",  "value":2,  "question":"What CSS property is used for changing the font?"}, //font-family
-                    {"label":"Choice 3",  "value":3,  "question":"What CSS property is used for changing the color of text?"}, //color
-                    {"label":"Choice 4",  "value":4,  "question":"What CSS property is used for changing the boldness of text?"}, //font-weight
-                    {"label":"Choice 5",  "value":5,  "question":"What CSS property is used for changing the size of text?"}, //font-size
-                    {"label":"Choice 6",  "value":6,  "question":"What CSS property is used for changing the background color of a box?"}, //background-color
+                    {"label":"Choice 1",  "value":1,  "question":"API GOES HERE"}, // padding
+                    {"label":"Choice 2",  "value":2,  "question":"API GOES HERE"}, //font-family
+                    {"label":"Choice 3",  "value":3,  "question":"API GOES HERE"}, //color
+                    {"label":"Choice 4",  "value":4,  "question":"API GOES HERE"}, //font-weight
+                    {"label":"Choice 5",  "value":5,  "question":"API GOES HERE"}, //font-size
+                    {"label":"Choice 6",  "value":6,  "question":"API GOES HERE"}, //background-color
                     // {"label":"IPAD PRO",  "value":7,  "question":"Which word is used for specifying an HTML tag that is inside another tag?"}, //nesting
                     // {"label":"LAND",  "value":8,  "question":"Which side of the box is the third number in: margin:1px 1px 1px 1px; ?"}, //bottom
                     // {"label":"MOTOROLLA",  "value":9,  "question":"What are the fonts that don't have serifs at the ends of letters called?"}, //sans-serif
@@ -168,3 +168,14 @@ var padding = {top:20, right:40, bottom:0, left:0},
                 // need event listeners 
                 // going to need to reference info in the locale storage and put it in the correct spot  
                 //
+function accessMem() {
+var userFood = JSON.parse(localStorage.getItem("cuisineVal"))
+if (!userFood) {
+return }
+for (let i = 0; i < userFood.length; i++) {
+    data.push({"label":userFood[i].value, "value":i+1, "question":"API GOES HERE"})
+    console.log(userFood[i])
+}
+console.log(data)
+}
+accessMem()
