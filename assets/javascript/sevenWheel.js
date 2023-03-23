@@ -13,21 +13,36 @@ var padding = {top:20, right:40, bottom:0, left:0},
         //http://osric.com/bingo-card-generator/?title=HTML+and+CSS+BINGO!&words=padding%2Cfont-family%2Ccolor%2Cfont-weight%2Cfont-size%2Cbackground-color%2Cnesting%2Cbottom%2Csans-serif%2Cperiod%2Cpound+sign%2C%EF%B9%A4body%EF%B9%A5%2C%EF%B9%A4ul%EF%B9%A5%2C%EF%B9%A4h1%EF%B9%A5%2Cmargin%2C%3C++%3E%2C{+}%2C%EF%B9%A4p%EF%B9%A5%2C%EF%B9%A4!DOCTYPE+html%EF%B9%A5%2C%EF%B9%A4head%EF%B9%A5%2Ccolon%2C%EF%B9%A4style%EF%B9%A5%2C.html%2CHTML%2CCSS%2CJavaScript%2Cborder&freespace=true&freespaceValue=Web+Design+Master&freespaceRandom=false&width=5&height=5&number=35#results
         
         //(ED) each of these labels need to be tied to entries in userInput. Do we need to make a specific variable for each userInput? or should we store all of them in an array and break them up later?
-
-        var data = [
-                    //(ED) changed individual bespoke wheel labels to "choice x" and text properties changed. also commented out values 7-9.
+        // var data = [
+        //             //(ED) changed individual bespoke wheel labels to "choice x" and text properties changed. also commented out values 7-9.
                     
-                    {"label":"Choice 1",  "value":1,  "question":"API GOES HERE"}, // padding
-                    {"label":"Choice 2",  "value":2,  "question":"API GOES HERE"}, //font-family
-                    {"label":"Choice 3",  "value":3,  "question":"API GOES HERE"}, //color
-                    {"label":"Choice 4",  "value":4,  "question":"API GOES HERE"}, //font-weight
-                    {"label":"Choice 5",  "value":5,  "question":"API GOES HERE"}, //font-size
-                    {"label":"Choice 6",  "value":6,  "question":"API GOES HERE"}, //background-color
-                    // {"label":"IPAD PRO",  "value":7,  "question":"Which word is used for specifying an HTML tag that is inside another tag?"}, //nesting
-                    // {"label":"LAND",  "value":8,  "question":"Which side of the box is the third number in: margin:1px 1px 1px 1px; ?"}, //bottom
-                    // {"label":"MOTOROLLA",  "value":9,  "question":"What are the fonts that don't have serifs at the ends of letters called?"}, //sans-serif
-                    //{"label":"BMW", "value":10, "question":"With CSS selectors, what character prefix should one use to specify a class?"}
-        ];
+        //             {"label":"Choice 1",  "value":1,  "question":"API GOES HERE"}, // padding
+        //             {"label":"Choice 2",  "value":2,  "question":"API GOES HERE"}, //font-family
+        //             {"label":"Choice 3",  "value":3,  "question":"API GOES HERE"}, //color
+        //             {"label":"Choice 4",  "value":4,  "question":"API GOES HERE"}, //font-weight
+        //             {"label":"Choice 5",  "value":5,  "question":"API GOES HERE"}, //font-size
+        //             {"label":"Choice 6",  "value":6,  "question":"API GOES HERE"}, //background-color
+        // ];
+        var cuisineArray = []
+
+        function accessMem() {
+            var userFood = JSON.parse(localStorage.getItem("cuisineVal"))
+            if (!userFood) {
+            return }
+            
+            for (let i = 0; i < userFood.length; i++) {
+                cuisineArray.push({"label":userFood[i].value, "value":i+1, "question":"API GOES HERE"})
+                console.log(userFood[i])
+            }
+            // data = Object.assign(data, cuisineArray)
+            console.log(cuisineArray)
+            }
+            
+            accessMem()
+            
+
+        var data = cuisineArray
+
         var svg = d3.select('#chart')
             .append("svg")
             .data([data])
@@ -168,14 +183,3 @@ var padding = {top:20, right:40, bottom:0, left:0},
                 // need event listeners 
                 // going to need to reference info in the locale storage and put it in the correct spot  
                 //
-function accessMem() {
-var userFood = JSON.parse(localStorage.getItem("cuisineVal"))
-if (!userFood) {
-return }
-for (let i = 0; i < userFood.length; i++) {
-    data.push({"label":userFood[i].value, "value":i+1, "question":"API GOES HERE"})
-    console.log(userFood[i])
-}
-console.log(data)
-}
-accessMem()
