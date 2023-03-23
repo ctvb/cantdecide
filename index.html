@@ -22,39 +22,35 @@
     <header>
             <!-- We want a hero wrapping the header and subheader. -->
     
-    <div class="container-fluid p-0">
-        
-        <div class="hero-section d-flex align-items-center">
-            <div class="container text-center">
-            
-                <h1 class="display-4"><strong>Can't Decide?</strong></h1>
-                <h2 id = "display-4"><strong>Make Date Night Easy</strong></h2>
-                <p class="lead"><em>No fuss, Just food</em></p>
-
-            <!-- <img src = "./assets/images/sammyosa3.jpg" alt="Image description" style=" position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;"> -->
-            <!-- <a class="btn btn-primary btn-lg" href="#" role="button">Learn More</a> -->
+        <div class="container-fluid p-0">        
+            <div class="hero-section d-flex align-items-center">
+                <div class="container text-center" id = "landingHeader">  
+                    <h1 class="display-4"><strong>Can't Decide?</strong></h1>
+                    <h2 id = "display-4"><strong>Make Date Night Easy</strong></h2>
+                    <p class="lead"><em>No fuss, Just food</em></p>
+                </div>
             </div>
         </div>
-    </div>
-        <!-- <h1 id = "webTitle">Can't Decide?</h1> -->
-    
-    <!-- ADD SUBHEADER -->
-        
-
-        
     </header>
+        
+    
     <!-- ADD EXPLANATION FOR WEBSITE -->
-    <section class = words>
-        <p>Has this ever happened to you? Have you ever had trouble deciding where to eat? I have, and it lead to arguments with my signficant other, but that hasn't happened ever since we started using <strong>Can't Decide</strong>! We've never been happier, our wallets and belts on the other hand...</p>
-    </section>
-    <!-- ADD 6 (SIX) BOXES TO FILL IN CUSINE -->
-    <div>
-    <div class = "but">
+    <!-- PUT THE MODAL IN A CARD -->
+    <div class="card" style="width: 18rem;">
+        <img src="./assets/images/sammyosa.jpg" class="card-img-top" alt="People eating samosas together">
+        <div class="card-body">
+            <h5 class="card-title">Vibe Check!</h5>
+            <p class="card-text">Has this ever happened to you? Have you ever had trouble deciding where to eat? I have, and it lead to arguments with my signficant other, but that hasn't happened ever since we started using <strong>Can't Decide</strong>! We've never been happier, our wallets and belts on the other hand...</p>
+            <div class = "but">
         <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+        <button type="button" class="btn btn-primary" id = "whatrufeelin" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
             What are you feeling?
         </button>
     </div>
+        </div>
+    </div>
+    <!-- ADD 6 (SIX) BOXES TO FILL IN CUSINE -->
+    <div>
         <!-- Modal -->
         <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
             aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -65,7 +61,7 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <form>
+                    <form>
                         <section class = input>
         
                                 <label for="co"></label>
@@ -100,16 +96,18 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary btn-under" > Understood</button>
+                        <button type="button" class="btn btn-primary btn-under">GIVE ME FOOD</button>
                     </div>
-                        </form>
-                </div>
+                </form>
             </div>
+        </div>
             
         </div>
+    <container id = nap>
         <section class = words>
             <p>Can't Decide is a revolutionary new app/webpage (not sure what we want to be called) that facilitates you and your loved ones in determining where you want to eat. You simply offer six (6) types of restuant and with our patented <strong><em>VIBE CHECK</em></strong> technology, our back-end programming will compare the vibe of those attending the meal outing and the cuisine options given to give you the perfect recommendation. The rest of the evening is up to you...</p>
         </section>
+    </container>
 
 
 
