@@ -1,4 +1,4 @@
-/* THE VAR THING FOR COLOUR OPTIONS */
+/* FOR ALL PAGES*/
 :root {
     --yellow: #F7FD04;
     --orange: #F9B208;
@@ -15,6 +15,43 @@
 }
 
 
+body {
+    background-color: var(--lyellow); 
+}
+
+/* BUTTONs */
+.but {
+    justify-content: center;
+    text-align: center;
+}
+
+header {
+    text-align: center;
+}
+
+.card .words {
+    display: inline;
+}
+
+.card {
+    padding: 10px;
+    margin: 10px;
+}
+
+.words {
+    text-align: end;
+    margin: 50px;
+    padding: 20px;
+    display: inline;
+}
+
+#nap {
+    justify-content: end;
+    display: inline-block;
+    font-size: large;
+}
+
+/* LANDING PAGE STUFF */
 .hero-section {
     height: 500px; /*increase the height */
     padding-top: 100px; /* increase the top padding */
@@ -23,6 +60,31 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+#landingHeader{
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    width: 30%;
+    color: var();
+}
+
+#whatrufeelin {
+    text-align: center;
+    border: solid;
+    background-color: var(--orange);
+}
+
+
+
+/* WHEEL STUFF */
+
+
+
+
+
+
+/* CONTACT US STUFF */
+
 
 /* COLOR IDEAS */
 
@@ -47,32 +109,14 @@ color: #8FD9A8;
 color: #D2E69C;
 /* background-color: #282846; */
 
-body {
-    /* background-color: var(--lyellow); */
-}
 
 /* Trying to centre button */
-header {
-    border: solid;
-    text-align: center;
-}
 
-.words {
-    text-align: center;
-    margin: 50px;
-    padding: 20px;
-}
+/* 
+.inout {
+    padding: 10px;
+} */
 
-.but {
-    justify-content: center;
-    border: solid;
-    text-align: center;
-}
-
-.btn-primary {
-    text-align: center;
-    border: solid;
-}
 
 
 /* MeDiA qUeRiEs */
