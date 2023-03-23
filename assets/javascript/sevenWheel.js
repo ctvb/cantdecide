@@ -8,21 +8,14 @@ var padding = {top:20, right:40, bottom:0, left:0},
             oldrotation = 0,
             picked = 100000,
             oldpick = [],
-            color = d3.scale.category20();//category20c()
+            color = d3.scale.linear().domain([0, 1, 2, 3, 4, 5]).range(["#ff0000", "#ff9c00", "#eeff00", "#1eff00", "#00beff", "#ad00ff"]);//category20c()
             //randomNumbers = getRandomNumbers();
-        //http://osric.com/bingo-card-generator/?title=HTML+and+CSS+BINGO!&words=padding%2Cfont-family%2Ccolor%2Cfont-weight%2Cfont-size%2Cbackground-color%2Cnesting%2Cbottom%2Csans-serif%2Cperiod%2Cpound+sign%2C%EF%B9%A4body%EF%B9%A5%2C%EF%B9%A4ul%EF%B9%A5%2C%EF%B9%A4h1%EF%B9%A5%2Cmargin%2C%3C++%3E%2C{+}%2C%EF%B9%A4p%EF%B9%A5%2C%EF%B9%A4!DOCTYPE+html%EF%B9%A5%2C%EF%B9%A4head%EF%B9%A5%2Ccolon%2C%EF%B9%A4style%EF%B9%A5%2C.html%2CHTML%2CCSS%2CJavaScript%2Cborder&freespace=true&freespaceValue=Web+Design+Master&freespaceRandom=false&width=5&height=5&number=35#results
         
         //(ED) each of these labels need to be tied to entries in userInput. Do we need to make a specific variable for each userInput? or should we store all of them in an array and break them up later?
         // var data = [
-        //             //(ED) changed individual bespoke wheel labels to "choice x" and text properties changed. also commented out values 7-9.
-                    
-        //             {"label":"Choice 1",  "value":1,  "question":"API GOES HERE"}, // padding
-        //             {"label":"Choice 2",  "value":2,  "question":"API GOES HERE"}, //font-family
-        //             {"label":"Choice 3",  "value":3,  "question":"API GOES HERE"}, //color
-        //             {"label":"Choice 4",  "value":4,  "question":"API GOES HERE"}, //font-weight
-        //             {"label":"Choice 5",  "value":5,  "question":"API GOES HERE"}, //font-size
-        //             {"label":"Choice 6",  "value":6,  "question":"API GOES HERE"}, //background-color
-        // ];
+        //             
+        //(ED) changed individual bespoke wheel labels to "choice x" and text properties changed. also commented out values 7-9.
+            
         var cuisineArray = []
 
         function accessMem() {
@@ -97,13 +90,7 @@ var padding = {top:20, right:40, bottom:0, left:0},
             
             picked = Math.round(data.length - (rotation % 360)/ps);
             picked = picked >= data.length ? (picked % data.length) : picked;
-            //(ED) if this prohibits the wheel from being spun multiple times randomly, lets take it out.
-            // if(oldpick.indexOf(picked) !== -1){
-            //     d3.select(this).call(spin);
-            //     return;
-            // } else {
-            //     oldpick.push(picked);
-            // }
+            
             rotation += 90 - Math.round(ps/2);
             vis.transition()
                 .duration(3000)
@@ -111,13 +98,6 @@ var padding = {top:20, right:40, bottom:0, left:0},
                 .each("end", function(){
                     //mark question as seen
                     d3.select(".slice:nth-child(" + (picked + 1) + ") path")
-                        //(ED) component to filling in old answers    
-                        // .attr("fill", "#111");
-                    //populate question
-                    //(ED) this code effects the spinning animation. commenting this out will cause the animation to jump around when spinning for a new option
-                    // d3.select("#question h1")
-                    //     .text(data[picked].question);
-                    //(ED) This keeps the animation fluid
                     oldrotation = rotation;
               
                     /* Get the result value from object "data" */
@@ -135,8 +115,6 @@ var padding = {top:20, right:40, bottom:0, left:0},
             .append("path")
             .attr("d", "M-" + (r*.15) + ",0L0," + (r*.05) + "L0,-" + (r*.05) + "Z")
             //(ED) component to filling in old answers
-            // .style({"fill":"black"});
-        //draw spin circle
         container.append("circle")
             .attr("cx", 0)
             .attr("cy", 0)
