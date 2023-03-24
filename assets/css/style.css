@@ -173,6 +173,37 @@ text {
 
 /* CONTACT US STUFF */
 
+#fn {
+    margin: auto;
+    padding: 10px;
+}
+
+#ea {
+    margin: auto;
+    padding: 10px;
+}
+
+#com {
+    margin: 1px auto ;
+    padding: 10px;
+}
+
+#conbut {
+    margin: 10px 10px 10px 0px;
+    padding: 10px;
+    text-align: end;
+    flex-wrap: wrap;
+}
+
+#check {
+    display: inline;
+    border: solid;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin: auto;
+}
+
 
 
 
