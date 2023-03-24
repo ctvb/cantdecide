@@ -15,8 +15,10 @@ var padding = { top: 20, right: 40, bottom: 0, left: 0 },
 //(ED) each of these labels need to be tied to entries in userInput. Do we need to make a specific variable for each userInput? or should we store all of them in an array and break them up later?
 // var data = [
 //             
-//(ED) changed individual bespoke wheel labels to "choice x" and text properties changed. also commented out values 7-9.
+//(ED) changed individual bespoke wheel labels to "choice x" and text properties changed. also commented out values 7-9
 
+var winningChoice;
+var location;
 var cuisineArray = []
 
 function accessMem() {
@@ -104,6 +106,29 @@ function spin(d) {
 
             /* Get the result value from object "data" */
             console.log(data[picked].value)
+            winningChoice = data[picked].label
+    fetch('https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?location=kansas%20city&term='+ winningChoice+'&sort_by=best_match&limit=20',{
+             headers:{
+                'authorization':"Bearer HHdD8QKXJrbdHE86msNV_mcpTvQokFr_8FsyCI_oYC_TUVuZiPk2tG-CUYZl6n7Ecl0k8qx_spVixJu9_bX2VYwOO4aiFe3Msre6Jbtkj8lehDFRTxgIld-900gbZHYx"
+             }  
+})
+.then(function (response) {
+          return response.json();
+        })
+        .then(function (data) {
+          console.log(data)
+          console.log(data[0].name)
+        //   for (var i = 0; i < data.length; i++){
+            // var box = document.createElement('div');
+            // box.setAttribute('class','container');
+
+            // var restTitle = document.createElement('h3');
+            // var restInfo = document.createElement('p');
+
+            // restTitle.textContent = data[i].name
+        
+            // }
+        })
 
             startConfetti();
             setTimeout(function () {
@@ -139,6 +164,8 @@ container.append("text")
     .style({ "font-weight": "bold", "font-size": "30px" });
 
 
+
+    // Rotate between function
 function rotTween(to) {
     var i = d3.interpolate(oldrotation % 360, rotation);
     return function (t) {
@@ -147,7 +174,7 @@ function rotTween(to) {
 
 }
 
-
+// randomizes values for wheel
 function getRandomNumbers() {
     var array = new Uint16Array(1000);
     var scale = d3.scale.linear().range([360, 1440]).domain([0, 100000]);
@@ -165,42 +192,26 @@ function getRandomNumbers() {
     return array;
 }
 
-// let winningChoice = (value)
+
+// id = id name of new container, classes = array of classes aka information adding to container element,
+// content: html content to add inside the new container element
+// function makeSmallBoxResult(id, classes, content) {
+
+//  var container = document.createElement("div");
+ 
+//  container.setAttribute("id", id); 
+//  container.classList.add("container", classes);
+//  container.innerHTML = content;
+ 
+//  return container
+
+// }
+
+
+
 //(ED) Grab the winning value's paired named input, set that to winningChoice? Then place winningChoice where '&term=italian' is
 //(ED) Do we need to assign user's location to a new variable? how are we going to ask for this? What if the user's location is one word like 'Seattle'
 
-fetch('https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?'+'location='+'new'+'%20'+'york'+'&term='+'italian'+'&sort_by=best_match&limit=20',{
-    headers:{
-        'authorization':"Bearer HHdD8QKXJrbdHE86msNV_mcpTvQokFr_8FsyCI_oYC_TUVuZiPk2tG-CUYZl6n7Ecl0k8qx_spVixJu9_bX2VYwOO4aiFe3Msre6Jbtkj8lehDFRTxgIld-900gbZHYx"
-    }  
-})
-.then(function (response) {
-          return response.json();
-        })
-        .then(function (data) {
-          console.log(data)
-        })
-
-// const options = {
-// 	method: 'GET',
-// 	headers: {
-// 		'X-RapidAPI-Key': '50e0193d11msh766f67d9b3f3906p170782jsnfd8cdee942e2',
-// 		'X-RapidAPI-Host': 'nutritionix-api.p.rapidapi.com'
-// 	}
-// };
-
-// fetch('https://nutritionix-api.p.rapidapi.com/v1_1/item?upc=49000036756', options)
-// 	.then(response => response.json())
-// 	.then(response => console.log(response))
-// 	.catch(err => console.error(err));
-
-
-// fetch(requestUrl)
-//     .then(function (response) {
-//       return response.json();
-//     })
-//     .then(function (data) {
-//       console.log(data)
 
 
 
