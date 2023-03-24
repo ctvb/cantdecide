@@ -1,3 +1,5 @@
+// //Api
+
 
 //var userInput
 
@@ -40,11 +42,5 @@ let cuisineVal = []
     })
 
 
-//Api
-//
 
-//weather API
 
-//map API
-
-//recommendation API
