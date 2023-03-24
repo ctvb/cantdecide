@@ -76,7 +76,6 @@ header {
     text-align: end;
     margin: 50px;
     padding: 20px;
-    display: inline;
     font-size: 2rem;
     color: #E3510B;
 }
@@ -107,7 +106,6 @@ header {
 
 #nap {
     justify-content: flex-end;
-    display: inline;
     font-size: large;
     
     
