@@ -153,7 +153,8 @@ var padding = {top:20, right:40, bottom:0, left:0},
             }
             return array;
         }
-
+        startConfetti()
+        console.log(startConfetti)
         //(gd)create a function that will implement the lables of the different sections and those labes will be the links to the resturants 
             // also do we want the background of the wheel section to change as well so that it a photo of the resturant 
 
