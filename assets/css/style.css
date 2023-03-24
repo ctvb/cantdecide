@@ -188,6 +188,16 @@ text {
 }
 
 
+#headerOptions{
+    font-family: 'Pacifico', cursive;
+    font-size: 40px;
+    color: var(--dorange);
+    justify-content: center;
+    text-align: center;
+    background-color: white;
+}
+
+
 
 /* CONTACT US STUFF */
 

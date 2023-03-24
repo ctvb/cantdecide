@@ -116,18 +116,82 @@ function spin(d) {
           return response.json();
         })
         .then(function (data) {
-          console.log(data)
-          console.log(data[0].name)
-        //   for (var i = 0; i < data.length; i++){
+
+            console.log(data);
+            var food = document.getElementById("food-options");
+           
+            // Create the header element and set its text content
+            var here = document.createElement('div');
+            here.setAttribute('id', "headerOptions");
+            here.textContent = 'Here are some of your options:';
+
+
+            // Append
+            food.appendChild(here);
+           
+           
+    
+
+        
+
+            // WAY TOO MUCH DATA LIMIT IT to 8
+          for (var i = 0; i < 10; i++){
+
+            // GrandParent
+            var cardCont = document.createElement('div');
+            cardCont.setAttribute("id", "card");
+            cardCont.setAttribute("style", "width: 18rem");
+
+            // Parent
+            var cardBody = document.createElement('div');
+            cardBody.setAttribute("class", "card-body");
+
+            // Child 1
+              var cardTitle = document.createElement('h5');
+              cardTitle.textContent = data.businesses[i].name;
+              cardTitle.setAttribute("class", "card-title");
+
+            // Child 2 HERE WILL GO INFORMATION ABOUT RESTURANT FOR NOW IPSUM
+
+              var cardText = document.createElement('p');
+              cardText.textContent = "IPSUM";
+              cardText.setAttribute("class", "card-text");
+
+            // Child 3 HERE WILL BE LINK TO WHATEVER WE NEED WITH BUTTON FOR NOW IT WILL BE RICK ROLL
+
+            var cardButton = document.createElement('a');
+            cardButton.textContent = "Rick-Roll";
+            cardButton.setAttribute("class","btn btn-primary");
+              cardButton.href = "https://www.youtube.com/watch?v=xvFZjo5PgG0";
+
+
+            // Append the children to the parent
+              cardBody.appendChild(cardTitle);
+              cardBody.appendChild(cardText);
+              cardBody.appendChild(cardButton);
+
+            // Append the parent to the grandparent and html
+              cardCont.appendChild(cardBody);
+              food.appendChild(cardCont);
+            
+            
+
+
             // var box = document.createElement('div');
             // box.setAttribute('class','container');
 
             // var restTitle = document.createElement('h3');
             // var restInfo = document.createElement('p');
 
-            // restTitle.textContent = data[i].name
+            // restTitle.textContent = data.businesses[i].name;
+
+            // box.appendChild(restTitle);
+
+            // document.getElementById("food-options").appendChild(box);
+            
+
         
-            // }
+            }
         })
 
             startConfetti();
