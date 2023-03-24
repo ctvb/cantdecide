@@ -50,3 +50,19 @@
 //     return (num.length > 0) && !isNaN(num);
 // }
 
+// // SEND CONTACT INFO
+// function sendContact() {
+//     fields.fn = getName();
+
+//     if (isValid()) {
+//         var usr = new User(firstName.value, lastName.value, email.value, comments.value);
+//         alert("${usr.firstName} Thank you for reaching out to us.")
+
+//     } else {
+//         alert("There was an issue with your request")
+//     }
+// }
+
+// console.log(isNotEmpty)
+// console.log(isNumber)
+// console.log(sendContact)
