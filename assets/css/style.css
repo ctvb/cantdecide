@@ -19,6 +19,7 @@ body {
     background-image: url('../images/DinnerDateYellowTransparent.png');
     background-size: 40%;
     background-repeat: repeat;
+    font-family: 'Quicksand', sans-serif;
     
 
 }
@@ -132,8 +133,27 @@ header {
     background-color: var(--lyellow);
 }
 
-/* WHEEL CSS  */
+#title-grab{
+    font-family: 'Pacifico', cursive;
+}
 
+#wheel-grab{
+    font-family: 'Pacifico', cursive;
+    font-size: 80px;
+    color: var(--ddorange);
+}
+
+/* WHEEL CSS  */
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center-wheel{
+    flex-grow: auto;
+    
+}
 
 text {
     font-family: Helvetica, Arial, sans-serif;
@@ -142,7 +162,7 @@ text {
 }
 
 #chart {
-    position: absolute;
+    /* position: absolute; */
     width: 500px;
     height: 500px;
     top: 0;
@@ -150,7 +170,7 @@ text {
 }
 
 #question {
-    position: absolute;
+    /* position: absolute; */
     width: 400px;
     height: 500px;
     top: 0;
