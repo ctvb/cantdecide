@@ -39,16 +39,34 @@
     <!-- ADD EXPLANATION FOR WEBSITE -->
     <!-- PUT THE MODAL IN A CARD -->
     <div class="row">
-        <div class="col-3">
-            <div class="card" style="width: 18rem;">
+        <div class="col-9 ">
+            <container id="nap">
+                <section class="words">
+                    <p id="words-background">Can't Decide is a revolutionary new app/webpage (not sure what we want to be called) that
+                        helps you
+                        and
+                        your loved ones decide what you want to eat. Simply plug in six (6) types of cuisines or foods
+                        and
+                        with
+                        our patented <strong><em>VIBE CHECK</em></strong> technology, our back-end programming will
+                        compare the
+                        vibe
+                        of those attending the meal outing and offer you the perfect recommendation.
+                        The
+                        rest of the evening is up to you...</p>
+                </section>
+            </container>
+        </div>
+        <div class="col-3 ">
+            <div class="card" style="width: 18rem;" id="vibe-check-box">
                 <img src="./assets/images/sammyosa.jpg" class="card-img-top" alt="People eating samosas together">
                 <div class="card-body">
-                    <h5 class="card-title">Vibe Check!</h5>
-                    <p class="card-text">Has this ever happened to you? Have you ever had trouble deciding where to eat?
-                        I have,
-                        and it lead to arguments with my signficant other, but that hasn't happened ever since we
-                        started using
-                        <strong>Can't Decide</strong>! We've never been happier, our wallets and belts on the other
+                    <h5 class="card-title" id="landing-card-tit">Vibe Check!</h5>
+                    <p class="card-text" id = "landing-card-text">Has this ever happened to you? Have you ever had trouble deciding where to eat?
+                        We've here to help.
+                        Ever since we
+                        created
+                        <strong>Can't Decide</strong> We've spent less time debating and more time eating! We're full and happy, our wallets and belts on the other
                         hand...
                     </p>
                     <div class="but">
@@ -61,25 +79,6 @@
                 </div>
             </div>
         </div>
-        <div class="col-9">
-            <container id="nap">
-                <section class="words">
-                    <p>Can't Decide is a revolutionary new app/webpage (not sure what we want to be called) that
-                        facilitates you
-                        and
-                        your loved ones in determining where you want to eat. You simply offer six (6) types of restuant
-                        and
-                        with
-                        our patented <strong><em>VIBE CHECK</em></strong> technology, our back-end programming will
-                        compare the
-                        vibe
-                        of those attending the meal outing and the cuisine options given to give you the perfect
-                        recommendation.
-                        The
-                        rest of the evening is up to you...</p>
-                </section>
-            </container>
-        </div>
     </div>
 
 
@@ -90,9 +89,9 @@
         <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
             aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div class="modal-dialog">
-                <div class="modal-content">
+                <div class="modal-content" id="vibe-check-box">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="staticBackdropLabel">Time for food!</h5>
+                        <h5 class="modal-title" id="staticBackdropLabel">Give us six options.</h5>
                         
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>

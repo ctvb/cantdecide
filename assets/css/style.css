@@ -16,21 +16,54 @@
 
 
 body {
-    background-color: var(--lyellow); 
+    background-image: url('../images/DinnerDateYellowTransparent.png');
+    background-size: 40%;
+    background-repeat: repeat;
+    
+
 }
 
-/* BUTTONs */
+.btn{
+    text-align: center;
+    border: solid;
+    border-color: var(--lyellow);
+    background-color: var(--dorange);
+    color: var(--lyellow);
+    font-size: 20px;
+}
+
+/* Modal btn wouldnt change color unless i do this. */
+.btn:hover,
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: var(--lyellow) !important;
+    color: var(--dorange)  !important;
+    border-color: var(--dorange) !important;
+}
+
+.btn:active{
+    box-shadow: none;
+        /* remove any box shadow */
+        outline: none;
+        /* remove any outline */
+        transform: translateY(2px);
+        /* move the button down slightly */
+}
+
+
+/* CARDS */
 .but {
     justify-content: center;
     text-align: center;
 }
+
 
 header {
     text-align: center;
 }
 
 .card .words {
-    display: inline;
+    display: inline-block;
 }
 
 .card {
@@ -43,17 +76,20 @@ header {
     margin: 50px;
     padding: 20px;
     display: inline;
+    font-size: 2rem;
+    color: #E3510B;
 }
 
-#nap {
-    justify-content: end;
-    display: inline-block;
-    font-size: large;
+#words-background{
+    background-color: var(--lyellow);
+    border: 20px solid;
+    border-color: var(--lyellow);
 }
+
 
 /* LANDING PAGE STUFF */
 .hero-section {
-    height: 500px; /*increase the height */
+    height: 518px; /*increase the height */
     padding-top: 100px; /* increase the top padding */
     padding-bottom: 100px; /* increase the bottom padding */
     background-image: url("../images/sammyosa9.jpg");
@@ -64,26 +100,92 @@ header {
 #landingHeader{
     background-color: #fff;
     box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-    width: 30%;
-    color: var();
+    width: 25%;
+    border-radius: 2%;
 }
 
-#whatrufeelin {
-    text-align: center;
-    border: solid;
-    background-color: var(--orange);
+#nap {
+    justify-content: flex-end;
+    display: inline;
+    font-size: large;
+    
+    
+}
+
+#vibe-check-box {
+    background-color: #FCCD5A;
+    color: #E3510B;
 }
 
 
+#landing-card-title {
+    margin: 10px;
+    padding: 10px;
+    font-size: 25px
+}
+#landing-card-text {
+    font-size: 20px;
+    
+}
 
-/* WHEEL STUFF */
+#co{
+    background-color: var(--lyellow);
+}
+
+/* WHEEL CSS  */
 
 
+text {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 25px;
+    pointer-events: none;
+}
 
+#chart {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    top: 0;
+    left: 0;
+}
+
+#question {
+    position: absolute;
+    width: 400px;
+    height: 500px;
+    top: 0;
+    left: 520px;
+}
+
+#question h1 {
+    font-size: 50px;
+    font-weight: bold;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+}
 
 
 
 /* CONTACT US STUFF */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* COLOR IDEAS */
@@ -112,47 +214,5 @@ color: #D2E69C;
 
 /* Trying to centre button */
 
-/* 
-.inout {
-    padding: 10px;
-} */
 
-
-
-/* MeDiA qUeRiEs */
-
-/* WHEEL CSS */
-text{
-    font-family:Helvetica, Arial, sans-serif;
-    font-size:11px;
-    pointer-events:none;
-}
-
-#chart{
-    position:absolute;
-    width:500px;
-    height:500px;
-    top:0;
-    left:0;
-}
-
-#question{
-    position: absolute;
-    width:400px;
-    height:500px;
-    top:0;
-    left:520px;
-}
-
-#question h1{
-    font-size: 50px;
-    font-weight: bold;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    position: absolute;
-    padding: 0;
-    margin: 0;
-    top:50%;
-    -webkit-transform:translate(0,-50%);
-            transform:translate(0,-50%);
-}
 
