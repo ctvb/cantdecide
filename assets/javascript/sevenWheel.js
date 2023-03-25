@@ -185,7 +185,7 @@ function getRandomNumbers() {
 
 
 function getRest(){
-    fetch('https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?location=kansas%20city&term=' + winningChoice + '&sort_by=best_match&limit=20', {
+    fetch('https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?location=los%20angeles&term=' + winningChoice + '&sort_by=best_match&limit=20', {
         headers: {
             'authorization': "Bearer HHdD8QKXJrbdHE86msNV_mcpTvQokFr_8FsyCI_oYC_TUVuZiPk2tG-CUYZl6n7Ecl0k8qx_spVixJu9_bX2VYwOO4aiFe3Msre6Jbtkj8lehDFRTxgIld-900gbZHYx"
         }
