@@ -31,6 +31,9 @@ var modalButton = $('#whatrufeelin');
 var locationBox = $('.locationBox');
 
 
+
+// Makes button appear and dissapear depending on number of char
+
 locationBox.on('input', function () {
     if ($(this).val().trim() !== '') {
         $(modalButton).removeClass('d-none');
@@ -39,11 +42,16 @@ locationBox.on('input', function () {
     }
 });
 
-
+// Here we need to take in local storage for location
 
     submitBtn.on("click", function () {
- 
 
+
+        // locationBox.val().trim()
+ 
+        // Cleans out previous entries
+        localStorage.removeItem("cuisineVal");
+        
         $('form input[type=text]').each(function () {
             let foodType = $(this).val();
             cuisineVal.push({
@@ -56,7 +64,7 @@ locationBox.on('input', function () {
         console.log(cuisineVal);
         console.log(this);
 
-        $('#staticBackdrop').modal('hide');
+       
     })
 
 
