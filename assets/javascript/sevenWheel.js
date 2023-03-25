@@ -108,6 +108,11 @@ function spin(d) {
             console.log(data[picked].value)
             winningChoice = data[picked].label
 
+
+
+            // HERE WE WILL DO OTHER API CALLS SUCH AS WEATHER AND DAY JS
+
+
             // MADE THIS TO CLEAR THE FOOD OPTIONS BEFORE CONFETTI CLEARS
             clearFoodOptions();
 
@@ -191,8 +196,11 @@ function getRest(){
         .then(function (data) {
 
             console.log(data);
+
+
             var food = document.getElementById("food-options");
 
+            // If header options doesnt exist yet, create it.
             if (!document.getElementById("headerOptions")){
                 // Create the header element and set its text content
                 var here = document.createElement('div');
@@ -208,34 +216,42 @@ function getRest(){
            
 
 
-            // WAY TOO MUCH DATA LIMIT IT to 8
+            // WAY TOO MUCH DATA LIMIT IT to 10
             for (var i = 0; i < 10; i++) {
 
                 // GrandParent
                 var cardCont = document.createElement('div');
                 cardCont.setAttribute("class", "card foodCard");
-                cardCont.setAttribute("style", "width: 18rem");
-                cardCont.setAttribute
 
-                // Parent
+                // FOR COLORS
+                cardCont.setAttribute("id", "vibe-check-box");
+                
+                // Parent1
+                var cardHeader = document.createElement('h4');
+                cardHeader.setAttribute("class", "card-header ");
+
+                // EXAMPLE OF HOW TO PUT API INFO IN DYNAMIC TEXT
+                cardHeader.textContent = data.businesses[i].name;
+                
+                // Parent2
                 var cardBody = document.createElement('div');
-                cardBody.setAttribute("class", "card-body");
+                cardBody.setAttribute("class", "card-body ");
 
-                // Child 1
+                // Child 1 of parent 2
                 var cardTitle = document.createElement('h5');
-                cardTitle.textContent = data.businesses[i].name;
+                cardTitle.textContent = "Zoo-wee-mama";
                 cardTitle.setAttribute("class", "card-title");
 
-                // Child 2 HERE WILL GO INFORMATION ABOUT RESTURANT FOR NOW IPSUM
+                // Child 2 of parent 2 HERE WILL GO INFORMATION ABOUT RESTURANT FOR NOW IPSUM
 
                 var cardText = document.createElement('p');
-                cardText.textContent = "IPSUM";
+                cardText.textContent = "IPSUM IPSUMIPSUMIPSUMIPSUMIPSUMIPSUMIPSUMIPSUMIPSUMIPSUMIPSUMIPSUMIPSUMIPSUMIPSUMIPSUMIPSUMIPSUMIPSUMIPSUMIPSUMIPSUM";
                 cardText.setAttribute("class", "card-text");
 
-                // Child 3 HERE WILL BE LINK TO WHATEVER WE NEED WITH BUTTON FOR NOW IT WILL BE RICK ROLL
+                // Child 3 of parent 2 HERE WILL BE LINK TO WHATEVER WE NEED WITH BUTTON FOR NOW IT WILL BE RICK ROLL
 
                 var cardButton = document.createElement('a');
-                cardButton.textContent = "Rick-Roll";
+                cardButton.textContent = "Subscribe to my OF";
                 cardButton.setAttribute("class", "btn btn-primary");
                 cardButton.href = "https://www.youtube.com/watch?v=xvFZjo5PgG0";
 
@@ -246,6 +262,7 @@ function getRest(){
                 cardBody.appendChild(cardButton);
 
                 // Append the parent to the grandparent and html
+                cardCont.appendChild(cardHeader);
                 cardCont.appendChild(cardBody);
                 food.appendChild(cardCont);
 

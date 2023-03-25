@@ -52,6 +52,15 @@ body {
 }
 
 
+/* CARD DESIGN ON MULTIPLE PAGES */
+#vibe-check-box {
+    background-color: var(--lyellow);
+    color: var(--ddorange);
+    
+
+}
+
+
 /* CARDS */
 .but {
     justify-content: center;
@@ -111,10 +120,7 @@ header {
     
 }
 
-#vibe-check-box {
-    background-color: #FCCD5A;
-    color: #E3510B;
-}
+
 
 
 #landing-card-title {
