@@ -49,7 +49,7 @@
     <header>
         <div class="container-fluid p-0">
             <!-- <div class="hero-section d-flex align-items-center"> -->
-                <div class="container text-center" id="contactHeader">
+                <div class="container text-center page-header" id="landingHeader">
                     <h4>Did You Enjoy your Experience?</h4>
                     <h1 class="display-4" id="title-grab"><strong>Can't Decide?</strong></h1>
                     <h2 id="display-4"><strong>Then Give Us A Shout</strong></h2>
@@ -61,29 +61,30 @@
     <!-- SUBHEADER -->
 
     <!-- FIRST AND LAST NAME LINE -->
-    <div class="input-group" id = "fn">
-        <span class="input-group-text">First and Last name</span>
-        <input type="text" aria-label="First name" class="form-control">
-        <input type="text" aria-label="Last name" class="form-control">
-    </div>
+    <form>
+        <div class="input-group" id = "fn">
+            <span class="input-group-text">Your name</span>
+            <input type="text" aria-label="First name" class="form-control">
+        </div>
 
-    <!-- EMAIL -->
-    <div class="form-floating mb-3" id = "ea">
-        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-        <label for="floatingInput">Email address</label>
-    </div>
+        <!-- EMAIL -->
+        <div class="form-floating mb-3" id = "ea">
+            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+            <label for="floatingInput">Email address</label>
+        </div>
 
-    <!-- COMMENTS LINE -->
-    <div class="form-floating" id = "com">
-        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
-        <label for="floatingTextarea2">Comments</label>
-    </div>
+        <!-- COMMENTS LINE -->
+        <div class="form-floating" id = "com">
+            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+            <label for="floatingTextarea2">Comments</label>
+        </div>
 
-    <!-- SUBMIT BUTTON -->
-    <container id = "conbut">
-        <button type="button" class="btn btn-primary" id="submit" data-bs-toggle="modal" data-bs-target="#staticBackdrop">SUBMIT
-        </button>
-    </container>
+        <!-- SUBMIT BUTTON -->
+        <container id = "conbut">
+            <button type="button" class="btn btn-primary" id="submit" data-bs-toggle="modal" data-bs-target="#staticBackdrop">SUBMIT
+            </button>
+        </container>
+    </form>
 
 
     <!-- Scripts/API's -->
