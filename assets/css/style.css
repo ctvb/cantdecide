@@ -149,6 +149,25 @@ header {
     color: var(--ddorange);
 }
 
+/* Credits Page */
+.credits-list{
+    text-align: center;
+    list-style: none;
+    margin: space-evenly;
+    color: var(--ddorange);
+    padding: 1rem;
+}
+
+.links{
+    color: var(--ddorange);
+    text-decoration: none;
+}
+
+.links:hover{
+    color: var(--dorange);
+    text-decoration: underline;
+}
+
 /* WHEEL CSS  */
 .center{
     display: flex;
@@ -159,6 +178,13 @@ header {
 .center-wheel{
     flex-grow: auto;
     
+}
+
+#credits-container{
+    background-color: white;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    border-radius: 2%;
 }
 
 text {
