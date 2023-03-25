@@ -107,92 +107,9 @@ function spin(d) {
             /* Get the result value from object "data" */
             console.log(data[picked].value)
             winningChoice = data[picked].label
-    fetch('https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?location=kansas%20city&term='+ winningChoice+'&sort_by=best_match&limit=20',{
-             headers:{
-                'authorization':"Bearer HHdD8QKXJrbdHE86msNV_mcpTvQokFr_8FsyCI_oYC_TUVuZiPk2tG-CUYZl6n7Ecl0k8qx_spVixJu9_bX2VYwOO4aiFe3Msre6Jbtkj8lehDFRTxgIld-900gbZHYx"
-             }  
-})
-.then(function (response) {
-          return response.json();
-        })
-        .then(function (data) {
 
-            console.log(data);
-            var food = document.getElementById("food-options");
-           
-            // Create the header element and set its text content
-            var here = document.createElement('div');
-            here.setAttribute('id', "headerOptions");
-            here.textContent = 'Here are some of your options:';
-
-
-            // Append
-            food.appendChild(here);
-           
-           
-    
-
-        
-
-            // WAY TOO MUCH DATA LIMIT IT to 8
-          for (var i = 0; i < 10; i++){
-
-            // GrandParent
-            var cardCont = document.createElement('div');
-            cardCont.setAttribute("id", "card");
-            cardCont.setAttribute("style", "width: 18rem");
-
-            // Parent
-            var cardBody = document.createElement('div');
-            cardBody.setAttribute("class", "card-body");
-
-            // Child 1
-              var cardTitle = document.createElement('h5');
-              cardTitle.textContent = data.businesses[i].name;
-              cardTitle.setAttribute("class", "card-title");
-
-            // Child 2 HERE WILL GO INFORMATION ABOUT RESTURANT FOR NOW IPSUM
-
-              var cardText = document.createElement('p');
-              cardText.textContent = "IPSUM";
-              cardText.setAttribute("class", "card-text");
-
-            // Child 3 HERE WILL BE LINK TO WHATEVER WE NEED WITH BUTTON FOR NOW IT WILL BE RICK ROLL
-
-            var cardButton = document.createElement('a');
-            cardButton.textContent = "Rick-Roll";
-            cardButton.setAttribute("class","btn btn-primary");
-              cardButton.href = "https://www.youtube.com/watch?v=xvFZjo5PgG0";
-
-
-            // Append the children to the parent
-              cardBody.appendChild(cardTitle);
-              cardBody.appendChild(cardText);
-              cardBody.appendChild(cardButton);
-
-            // Append the parent to the grandparent and html
-              cardCont.appendChild(cardBody);
-              food.appendChild(cardCont);
-            
-            
-
-
-            // var box = document.createElement('div');
-            // box.setAttribute('class','container');
-
-            // var restTitle = document.createElement('h3');
-            // var restInfo = document.createElement('p');
-
-            // restTitle.textContent = data.businesses[i].name;
-
-            // box.appendChild(restTitle);
-
-            // document.getElementById("food-options").appendChild(box);
-            
-
-        
-            }
-        })
+            // MADE THIS TO CLEAR THE FOOD OPTIONS BEFORE CONFETTI CLEARS
+            clearFoodOptions();
 
             startConfetti();
             setTimeout(function () {
@@ -200,6 +117,11 @@ function spin(d) {
                 clearInterval();
             }, 2000);
 
+            // MADE THIS FUNCTION CALL
+            
+            getRest();
+            
+            
 
 
             /* Comment the below line for restrict spin to sngle time */
@@ -255,6 +177,95 @@ function getRandomNumbers() {
     }
     return array;
 }
+
+
+function getRest(){
+    fetch('https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?location=kansas%20city&term=' + winningChoice + '&sort_by=best_match&limit=20', {
+        headers: {
+            'authorization': "Bearer HHdD8QKXJrbdHE86msNV_mcpTvQokFr_8FsyCI_oYC_TUVuZiPk2tG-CUYZl6n7Ecl0k8qx_spVixJu9_bX2VYwOO4aiFe3Msre6Jbtkj8lehDFRTxgIld-900gbZHYx"
+        }
+    })
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+
+            console.log(data);
+            var food = document.getElementById("food-options");
+
+            if (!document.getElementById("headerOptions")){
+                // Create the header element and set its text content
+                var here = document.createElement('div');
+                here.setAttribute('id', "headerOptions");
+                here.textContent = 'Here are some of your options:';
+
+
+                // Append
+                food.appendChild(here);
+            }
+            
+
+           
+
+
+            // WAY TOO MUCH DATA LIMIT IT to 8
+            for (var i = 0; i < 10; i++) {
+
+                // GrandParent
+                var cardCont = document.createElement('div');
+                cardCont.setAttribute("class", "card foodCard");
+                cardCont.setAttribute("style", "width: 18rem");
+                cardCont.setAttribute
+
+                // Parent
+                var cardBody = document.createElement('div');
+                cardBody.setAttribute("class", "card-body");
+
+                // Child 1
+                var cardTitle = document.createElement('h5');
+                cardTitle.textContent = data.businesses[i].name;
+                cardTitle.setAttribute("class", "card-title");
+
+                // Child 2 HERE WILL GO INFORMATION ABOUT RESTURANT FOR NOW IPSUM
+
+                var cardText = document.createElement('p');
+                cardText.textContent = "IPSUM";
+                cardText.setAttribute("class", "card-text");
+
+                // Child 3 HERE WILL BE LINK TO WHATEVER WE NEED WITH BUTTON FOR NOW IT WILL BE RICK ROLL
+
+                var cardButton = document.createElement('a');
+                cardButton.textContent = "Rick-Roll";
+                cardButton.setAttribute("class", "btn btn-primary");
+                cardButton.href = "https://www.youtube.com/watch?v=xvFZjo5PgG0";
+
+
+                // Append the children to the parent
+                cardBody.appendChild(cardTitle);
+                cardBody.appendChild(cardText);
+                cardBody.appendChild(cardButton);
+
+                // Append the parent to the grandparent and html
+                cardCont.appendChild(cardBody);
+                food.appendChild(cardCont);
+
+
+            }
+        })
+}
+
+
+// CLEARS OUT OTHER OPTION IF WHEEL GOES AGAIN
+function clearFoodOptions() {
+    var food = document.querySelectorAll(".foodCard");
+    for (var i = 0; i < food.length; i++){
+        food[i].remove();
+    }
+    
+    
+}
+
+
 
 
 // id = id name of new container, classes = array of classes aka information adding to container element,
