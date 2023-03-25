@@ -254,12 +254,13 @@ function getRest(){
                  cardPrice.textContent = "Price: " + data.businesses[i].price;
                  cardText.setAttribute("class", "card-text price");
 
-                // Child 4 of parent 2 HERE WILL BE LINK TO WHATEVER WE NEED WITH BUTTON FOR NOW IT WILL BE RICK ROLL
-
+                // Child 4 of parent 2 HERE WILL BE LINK TO WHATEVER 
                 var cardButton = document.createElement('a');
                 cardButton.textContent = "Go To Website";
                 cardButton.setAttribute("class", "btn btn-primary");
                 cardButton.href = data.businesses[i].url;
+                
+                // Opens new tab
                 cardButton.target = '_blank';
 
 

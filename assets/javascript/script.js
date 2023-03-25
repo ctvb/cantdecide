@@ -24,23 +24,47 @@
 
 // function to set the inputs from the modal to local storage 
 let submitBtn = $(".btn-under");
-let cuisineVal = []
-    
-    submitBtn.on("click",function(){
-    
-     $('form input[type=text]').each(function(){
-    let foodType = $(this).val();
-        cuisineVal.push({
-            name: this.name,
-            value: foodType,
+let cuisineVal = [];
+
+
+var modalButton = $('#whatrufeelin');
+var locationBox = $('.locationBox');
+
+
+locationBox.on('input', function () {
+    if ($(this).val().trim() !== '') {
+        $(modalButton).removeClass('d-none');
+    } else{
+        $(modalButton).addClass('d-none');
+    }
+});
+
+
+
+    submitBtn.on("click", function () {
+ 
+
+        $('form input[type=text]').each(function () {
+            let foodType = $(this).val();
+            cuisineVal.push({
+                name: this.name,
+                value: foodType,
+            })
+            console.log(this);
         })
-    console.log(this)
-     })
-       localStorage.setItem("cuisineVal", JSON.stringify(cuisineVal))
-       console.log(cuisineVal)
-    console.log(this)
+        localStorage.setItem("cuisineVal", JSON.stringify(cuisineVal));
+        console.log(cuisineVal);
+        console.log(this);
+
+        $('#staticBackdrop').modal('hide');
     })
 
 
+
+
+
+
+
+    
 
 
