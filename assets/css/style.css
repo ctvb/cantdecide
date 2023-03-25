@@ -130,7 +130,6 @@ header {
 }
 #landing-card-text {
     font-size: 20px;
-    
 }
 
 #co{
@@ -206,6 +205,18 @@ text {
 
 
 /* CONTACT US STUFF */
+
+.contact-header-nothing-else {
+    margin-top: 20px;
+}
+
+.better-margin {
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    width: 75%;
+    border-radius: 2%;
+    margin-bottom: 20px;
+}
 
 #fn {
     margin: auto;
