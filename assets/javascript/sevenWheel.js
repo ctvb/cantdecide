@@ -228,37 +228,45 @@ function getRest(){
                 
                 // Parent1
                 var cardHeader = document.createElement('h4');
-                cardHeader.setAttribute("class", "card-header ");
+                cardHeader.setAttribute("class", "card-header");
 
                 // EXAMPLE OF HOW TO PUT API INFO IN DYNAMIC TEXT
                 cardHeader.textContent = data.businesses[i].name;
                 
                 // Parent2
                 var cardBody = document.createElement('div');
-                cardBody.setAttribute("class", "card-body ");
+                cardBody.setAttribute("class", "card-body");
 
                 // Child 1 of parent 2
                 var cardTitle = document.createElement('h5');
-                cardTitle.textContent = "Zoo-wee-mama";
+                cardTitle.textContent = data.businesses[i].location.display_address.join(" ");
                 cardTitle.setAttribute("class", "card-title");
 
-                // Child 2 of parent 2 HERE WILL GO INFORMATION ABOUT RESTURANT FOR NOW IPSUM
-
+                // Child 2 of parent 2 
                 var cardText = document.createElement('p');
-                cardText.textContent = "IPSUM IPSUMIPSUMIPSUMIPSUMIPSUMIPSUMIPSUMIPSUMIPSUMIPSUMIPSUMIPSUMIPSUMIPSUMIPSUMIPSUMIPSUMIPSUMIPSUMIPSUMIPSUMIPSUM";
-                cardText.setAttribute("class", "card-text");
+                // Rating 
+                cardText.textContent = "Rating: " + data.businesses[i].rating.toString();
+                cardText.setAttribute("class", "card-text rating");
 
-                // Child 3 of parent 2 HERE WILL BE LINK TO WHATEVER WE NEED WITH BUTTON FOR NOW IT WILL BE RICK ROLL
+                //  Child 3 of parent 2
+                 var cardPrice = document.createElement('p');
+                
+                 cardPrice.textContent = "Price: " + data.businesses[i].price;
+                 cardText.setAttribute("class", "card-text price");
+
+                // Child 4 of parent 2 HERE WILL BE LINK TO WHATEVER WE NEED WITH BUTTON FOR NOW IT WILL BE RICK ROLL
 
                 var cardButton = document.createElement('a');
-                cardButton.textContent = "Subscribe to my OF";
+                cardButton.textContent = "Go To Website";
                 cardButton.setAttribute("class", "btn btn-primary");
-                cardButton.href = "https://www.youtube.com/watch?v=xvFZjo5PgG0";
+                cardButton.href = data.businesses[i].url;
+                cardButton.target = '_blank';
 
 
                 // Append the children to the parent
                 cardBody.appendChild(cardTitle);
                 cardBody.appendChild(cardText);
+                cardBody.appendChild(cardPrice);
                 cardBody.appendChild(cardButton);
 
                 // Append the parent to the grandparent and html
