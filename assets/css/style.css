@@ -120,7 +120,10 @@ header {
     
 }
 
-
+.locationBox {
+    justify-content: center;
+    width: 190px;
+}
 
 
 #landing-card-title {
@@ -134,7 +137,7 @@ header {
 }
 
 #co{
-    background-color: var(--lyellow);
+    background-color: white;
 }
 
 #title-grab{
