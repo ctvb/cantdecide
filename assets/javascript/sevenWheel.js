@@ -1,17 +1,23 @@
 // (RB) GLOBALS FOR YELP API:
 
-var city = localStorage.getItem("Location");
-var cityarr;
+var city = localStorage.getItem("Location").trim();
+city.split(' ').join('%20');
 
-if (city.includes(' ')) {
-    cityarr = city.split(' ');
-}
-else {
-    //need this for modifying url incase more words cities in america have up to 5 words
-    cityarr = [city, '', '', '', '', ''];
-}
 
-console.log(cityarr);
+// if (city.includes(' ')) {
+//     cityarr = city.split(' ');
+// }
+// else {
+//     //need this for modifying url incase more words cities in america have up to 5 words
+//     cityarr = [city, ''];
+// }
+
+// var cityjoin = cityarr.join('%20');
+    
+
+
+// console.log(cityjoin);
+// console.log(cityarr);
 
 //parse string value into a variable
 
@@ -201,10 +207,10 @@ function getRandomNumbers() {
 
 
 
-
+// cityarr[0] + 20% + cityarr[1]+ cityarr[1]+
 
 function getRest(){
-    fetch('https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?location=Los%20Angeles&term=' + winningChoice + '&sort_by=best_match&limit=20', {
+    fetch('https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?location='+ city+'&term=' + winningChoice + '&sort_by=best_match&limit=20', {
         headers: {
             'authorization': "Bearer HHdD8QKXJrbdHE86msNV_mcpTvQokFr_8FsyCI_oYC_TUVuZiPk2tG-CUYZl6n7Ecl0k8qx_spVixJu9_bX2VYwOO4aiFe3Msre6Jbtkj8lehDFRTxgIld-900gbZHYx"
         }
