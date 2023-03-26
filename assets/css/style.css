@@ -51,7 +51,7 @@ body {
 /* CARD DESIGN ON MULTIPLE PAGES */
 #vibe-check-box {
   background-color: var(--lyellow);
-  color: var(--ddorange);
+  color: #e3510b;
 }
 
 /* CARDS */
@@ -74,7 +74,7 @@ header {
 }
 
 .words {
-  text-align: end;
+  text-align: center;
   margin: 50px;
   padding: 20px;
   font-size: 2rem;
@@ -83,8 +83,10 @@ header {
 
 #words-background {
   background-color: var(--lyellow);
-  border: 20px solid;
-  border-color: var(--lyellow);
+  border: 2px solid;
+  border-color: var(--dorange);
+  border-radius: 10px;
+  padding: 20px;
 }
 
 /* LANDING PAGE STUFF */
@@ -122,6 +124,7 @@ header {
 
 #landing-card-text {
   font-size: 20px;
+  border;
 }
 
 #co {
@@ -271,8 +274,10 @@ text {
   #enjoy {
     font-size: small;
   }
-  #title-grab {
-    font-size: xx-large;
+  #landing-header {
+    font-size: 300px;
+    width: 25%;
+    border-radius: 2%;
   }
   .lead {
     font-size: small;
