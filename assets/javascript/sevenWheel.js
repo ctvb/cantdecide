@@ -24,7 +24,6 @@ var padding = { top: 20, right: 40, bottom: 0, left: 0 },
 //randomNumbers = getRandomNumbers();
 
 //(ED) each of these labels need to be tied to entries in userInput. Do we need to make a specific variable for each userInput? or should we store all of them in an array and break them up later?
-// var data = [
 //             
 //(ED) changed individual bespoke wheel labels to "choice x" and text properties changed. also commented out values 7-9
 
@@ -339,40 +338,6 @@ function getWeather() {
 
 
 }
-
-// function getWeather() {
-
-//     fetch('https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={7355009108da9226df5bd810ec2a29ae}', {
-//         headers: {
-//             'authorization': "Bearer HHdD8QKXJrbdHE86msNV_mcpTvQokFr_8FsyCI_oYC_TUVuZiPk2tG-CUYZl6n7Ecl0k8qx_spVixJu9_bX2VYwOO4aiFe3Msre6Jbtkj8lehDFRTxgIld-900gbZHYx"
-//         }
-//     })
-//         .then(function (response) {
-//             return response.json();
-//         })
-//         .then(function (data) { })
-
-
-// }
-
-
-
-
-
-// id = id name of new container, classes = array of classes aka information adding to container element,
-// content: html content to add inside the new container element
-// function makeSmallBoxResult(id, classes, content) {
-
-//  var container = document.createElement("div");
- 
-//  container.setAttribute("id", id); 
-//  container.classList.add("container", classes);
-//  container.innerHTML = content;
- 
-//  return container
-
-// }
-
 
 
 //(ED) Grab the winning value's paired named input, set that to winningChoice? Then place winningChoice where '&term=italian' is
