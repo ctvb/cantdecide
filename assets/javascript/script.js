@@ -32,6 +32,8 @@ var locationBox = $('.locationBox');
 
 
 
+
+
 // Makes button appear and dissapear depending on number of char
 
 locationBox.on('input', function () {
@@ -42,16 +44,17 @@ locationBox.on('input', function () {
     }
 });
 
+
 // Here we need to take in local storage for location
 
-    submitBtn.on("click", function () {
+    submitBtn.on("click keypress", function () {
 
-
-        // locationBox.val().trim()
- 
-        // Cleans out previous entries
-        localStorage.removeItem("cuisineVal");
         
+        // Puts in stuff for local Storage
+       
+        localStorage.setItem("Location", $(locationBox).val().trim());
+
+
         $('form input[type=text]').each(function () {
             let foodType = $(this).val();
             cuisineVal.push({
