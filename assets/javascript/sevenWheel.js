@@ -1,6 +1,22 @@
+// (RB) GLOBALS FOR YELP API:
+
+var city = localStorage.getItem("Location");
+var cityarr;
+
+if (city.includes(' ')) {
+    cityarr = city.split(' ');
+}
+else {
+    //need this for modifying url incase more words cities in america have up to 5 words
+    cityarr = [city, '', '', '', '', ''];
+}
+
+console.log(cityarr);
+
+//parse string value into a variable
+
+
 //Need to link info stored in userInput to this page. Must call on localStorage
-
-
 var padding = { top: 20, right: 40, bottom: 0, left: 0 },
     w = 500 - padding.left - padding.right,
     h = 500 - padding.top - padding.bottom,
@@ -19,7 +35,7 @@ var padding = { top: 20, right: 40, bottom: 0, left: 0 },
 
 var winningChoice;
 var location;
-var cuisineArray = []
+var cuisineArray = [];
 
 function accessMem() {
     var userFood = JSON.parse(localStorage.getItem("cuisineVal"))
@@ -35,10 +51,10 @@ function accessMem() {
     console.log(cuisineArray)
 }
 
-accessMem()
+accessMem();
 
 
-var data = cuisineArray
+var data = cuisineArray;
 
 var svg = d3.select('#chart')
     .append("svg")
@@ -184,8 +200,11 @@ function getRandomNumbers() {
 }
 
 
+
+
+
 function getRest(){
-    fetch('https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?location=los%20angeles&term=' + winningChoice + '&sort_by=best_match&limit=20', {
+    fetch('https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?location=Los%20Angeles&term=' + winningChoice + '&sort_by=best_match&limit=20', {
         headers: {
             'authorization': "Bearer HHdD8QKXJrbdHE86msNV_mcpTvQokFr_8FsyCI_oYC_TUVuZiPk2tG-CUYZl6n7Ecl0k8qx_spVixJu9_bX2VYwOO4aiFe3Msre6Jbtkj8lehDFRTxgIld-900gbZHYx"
         }
