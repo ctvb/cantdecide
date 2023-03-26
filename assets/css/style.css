@@ -1,366 +1,313 @@
 /* FOR ALL PAGES*/
 :root {
-    --yellow: #F7FD04;
-    --orange: #F9B208;
-    --dorange: #F98404;
-    --ddorange: #FC5404;
-    --lyellow: #FFFFC7;
-    /* Light Colours */
-    --teal: #28B5B5;
-    --grue: #4B778D;
-    --green: #8FD9A8;
-    --grellow: #D2E69C;
-    --purple: #282846;
-    /* Dark Colours */
+  --yellow: #f7fd04;
+  --orange: #f9b208;
+  --dorange: #f98404;
+  --ddorange: #fc5404;
+  --lyellow: #ffffc7;
+  /* Light Colours */
+  --teal: #28b5b5;
+  --grue: #4b778d;
+  --green: #8fd9a8;
+  --grellow: #d2e69c;
+  --purple: #282846;
+  /* Dark Colours */
 }
-
 
 body {
-    background-image: url('../images/DinnerDateYellowTransparent.png');
-    background-size: 40%;
-    background-repeat: repeat;
-    font-family: 'Quicksand', sans-serif;
+  background-image: url("../images/DinnerDateYellowTransparent.png");
+  background-size: 40%;
+  background-repeat: repeat;
+  font-family: "Quicksand", sans-serif;
 }
 
-.btn{
-    text-align: center;
-    border: solid;
-    border-color: var(--lyellow);
-    background-color: var(--dorange);
-    color: var(--lyellow);
-    font-size: 20px;
+.btn {
+  text-align: center;
+  border: solid;
+  border-color: var(--lyellow);
+  background-color: var(--dorange);
+  color: var(--lyellow);
+  font-size: 20px;
 }
 
 /* Modal btn wouldnt change color unless i do this. */
 .btn:hover,
 .btn-primary:hover,
 .btn-primary:focus {
-    background-color: var(--lyellow) !important;
-    color: var(--dorange)  !important;
-    border-color: var(--dorange) !important;
+  background-color: var(--lyellow) !important;
+  color: var(--dorange) !important;
+  border-color: var(--dorange) !important;
 }
 
-.btn:active{
-    box-shadow: none;
-        /* remove any box shadow */
-        outline: none;
-        /* remove any outline */
-        transform: translateY(2px);
-        /* move the button down slightly */
+.btn:active {
+  box-shadow: none;
+  /* remove any box shadow */
+  outline: none;
+  /* remove any outline */
+  transform: translateY(2px);
+  /* move the button down slightly */
 }
-
 
 /* CARD DESIGN ON MULTIPLE PAGES */
 #vibe-check-box {
-    background-color: var(--lyellow);
-    color: var(--ddorange);
+  background-color: var(--lyellow);
+  color: var(--ddorange);
 }
-
 
 /* CARDS */
 .but {
-    justify-content: center;
-    text-align: center;
+  justify-content: center;
+  text-align: center;
 }
 
-
 header {
-    text-align: center;
+  text-align: center;
 }
 
 .card .words {
-    display: inline-block;
+  display: inline-block;
 }
 
 .card {
-    padding: 10px;
-    margin: 10px;
+  padding: 10px;
+  margin: 10px;
 }
 
 .words {
-    text-align: end;
-    margin: 50px;
-    padding: 20px;
-    font-size: 2rem;
-    color: #E3510B;
+  text-align: end;
+  margin: 50px;
+  padding: 20px;
+  font-size: 2rem;
+  color: #e3510b;
 }
 
-#words-background{
-    background-color: var(--lyellow);
-    border: 20px solid;
-    border-color: var(--lyellow);
+#words-background {
+  background-color: var(--lyellow);
+  border: 20px solid;
+  border-color: var(--lyellow);
 }
-
 
 /* LANDING PAGE STUFF */
 .hero-section {
-    height: 518px; /*increase the height */
-    padding-top: 100px; /* increase the top padding */
-    padding-bottom: 100px; /* increase the bottom padding */
-    background-image: url("../images/sammyosa9.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
+  height: 518px; /*increase the height */
+  padding-top: 100px; /* increase the top padding */
+  padding-bottom: 100px; /* increase the bottom padding */
+  background-image: url("../images/sammyosa9.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-#landingHeader{
-    background-color: #fff;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-    width: 25%;
-    border-radius: 2%;
+#landingHeader {
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  width: 25%;
+  border-radius: 2%;
 }
 
 #nap {
-    justify-content: flex-end;
-    font-size: large;
+  justify-content: flex-end;
+  font-size: large;
 }
 
 .locationBox {
-    justify-content: center;
-    width: 190px;
+  justify-content: center;
+  width: 190px;
 }
 
-
 #landing-card-title {
-    margin: 10px;
-    padding: 10px;
-    font-size: 25px
+  margin: 10px;
+  padding: 10px;
+  font-size: 25px;
 }
 
 #landing-card-text {
-    font-size: 20px;
+  font-size: 20px;
 }
 
-#co{
-    background-color: white;
+#co {
+  background-color: white;
 }
 
 #title-grab {
-    font-family: 'Pacifico', cursive;
+  font-family: "Pacifico", cursive;
 }
 
 #wheel-grab {
-    font-family: 'Pacifico', cursive;
-    font-size: 80px;
-    color: var(--ddorange);
+  font-family: "Pacifico", cursive;
+  font-size: 80px;
+  color: var(--ddorange);
 }
 
 /* Credits Page */
 .credits-list {
-    text-align: center;
-    list-style: none;
-    margin: space-evenly;
-    color: var(--ddorange);
-    padding: 1rem;
+  text-align: center;
+  list-style: none;
+  margin: space-evenly;
+  color: var(--ddorange);
+  padding: 1rem;
 }
 
 .links {
-    color: var(--ddorange);
-    text-decoration: none;
+  color: var(--ddorange);
+  text-decoration: none;
 }
 
-.links:hover{
-    color: var(--dorange);
-    text-decoration: underline;
+.links:hover {
+  color: var(--dorange);
+  text-decoration: underline;
 }
 
 /* WHEEL CSS  */
-.center{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.center-wheel{
-    flex-grow: auto;
-    
+.center-wheel {
+  flex-grow: auto;
 }
 
-#credits-container{
-    background-color: white;
-    background-color: #fff;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-    border-radius: 2%;
+#credits-container {
+  background-color: white;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  border-radius: 2%;
 }
 
 text {
-    font-family: Helvetica, Arial, sans-serif;
-    font-size: 25px;
-    pointer-events: none;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 25px;
+  pointer-events: none;
 }
 
 #chart {
-    /* position: absolute; */
-    width: 500px;
-    height: 500px;
-    top: 0;
-    left: 0;
+  /* position: absolute; */
+  width: 500px;
+  height: 500px;
+  top: 0;
+  left: 0;
 }
 
 #question {
-    /* position: absolute; */
-    width: 400px;
-    height: 500px;
-    top: 0;
-    left: 520px;
+  /* position: absolute; */
+  width: 400px;
+  height: 500px;
+  top: 0;
+  left: 520px;
 }
 
 #question h1 {
-    font-size: 50px;
-    font-weight: bold;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    position: absolute;
-    padding: 0;
-    margin: 0;
-    top: 50%;
-    -webkit-transform: translate(0, -50%);
-    transform: translate(0, -50%);
+  font-size: 50px;
+  font-weight: bold;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
 }
 
-
-#headerOptions{
-    font-family: 'Pacifico', cursive;
-    font-size: 40px;
-    color: var(--dorange);
-    justify-content: center;
-    text-align: center;
-    background-color: white;
+#headerOptions {
+  font-family: "Pacifico", cursive;
+  font-size: 40px;
+  color: var(--dorange);
+  justify-content: center;
+  text-align: center;
+  background-color: white;
 }
-
-
 
 /* CONTACT US STUFF */
 
 .contact-header-nothing-else {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .better-margin {
-    background-color: #fff;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-    width: 75%;
-    border-radius: 2%;
-    margin-bottom: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  width: 75%;
+  border-radius: 2%;
+  margin-bottom: 20px;
 }
 
 #fn {
-    margin: auto;
-    padding: 10px;
+  margin: auto;
+  padding: 10px;
 }
 
 #ea {
-    margin: auto;
-    padding: 10px;
+  margin: auto;
+  padding: 10px;
 }
 
 #com {
-    margin: 1px auto ;
-    padding: 10px;
+  margin: 1px auto;
+  padding: 10px;
 }
 
 #conbut {
-    margin: 10px 10px 10px 0px;
-    padding: 10px;
-    text-align: end;
-    flex-wrap: wrap;
+  margin: 10px 10px 10px 0px;
+  padding: 10px;
+  text-align: end;
+  flex-wrap: wrap;
 }
 
 #check {
-    display: inline;
-    border: solid;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 10px;
-    margin: auto;
+  display: inline;
+  border: solid;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 10px;
+  margin: auto;
 }
 
 .contact-button {
-    text-align: center;
+  text-align: center;
 }
 
 @media screen and (min-width: 811px) {
-    #enjoy {
-        font-size: small;
-    }
-    #title-grab {
-        font-size: xx-large;
-    }
-    .lead {
-        font-size: small;
-    }
-    .date {
-        font-size: medium;
-    }
+  #enjoy {
+    font-size: small;
+  }
+  #title-grab {
+    font-size: xx-large;
+  }
+  .lead {
+    font-size: small;
+  }
+  .date {
+    font-size: medium;
+  }
 }
 
 @media screen and (max-width: 810px) {
-    #enjoy {
-        font-size: small;
-    }
-    #title-grab {
-        font-size: xx-large;
-    }
-    .lead {
-        font-size: small;
-    }
-    .date {
-        font-size: medium;
-    }
+  #enjoy {
+    font-size: small;
+  }
+  #title-grab {
+    font-size: xx-large;
+  }
+  .lead {
+    font-size: small;
+  }
+  .date {
+    font-size: medium;
+  }
 }
 
 @media screen and (min-width: 375px) {
-    #enjoy {
-        font-size: small;
-    }
-    #title-grab {
-        font-size: x-large;
-    }
-    .lead {
-        font-size: small;
-    }
-    .date {
-        font-size: medium;
-    }
+  #enjoy {
+    font-size: small;
+  }
+  #title-grab {
+    font-size: x-large;
+  }
+  .lead {
+    font-size: small;
+  }
+  .date {
+    font-size: medium;
+  }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* COLOR IDEAS */
-
-/* ROUND CORNERS */
-/* BOX SHADOW GLOW */
-/* PReSUMABLY SOME FLEXBOX STUFF :'( */
-
-
-/* Button Hover! */
-
-/* LIGHT MODE */
-/* color: #F7FD04;
-color: #F9B208
-color: #F98404
-color: #FC5404
-backgound-color: #FFFFC7
-
-/* DARK MODE */
-/* color: #28B5B5;
-color: #4B778D;
-color: #8FD9A8;
-color: #D2E69C;
-/* background-color: #282846; */
-
-
-/* Trying to centre button */
-
-
-
