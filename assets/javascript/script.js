@@ -6,6 +6,19 @@
 
 // dayjs()
 
+// Get current time using dayjs
+var now = dayjs();
+
+$('#headerTime').text(now.format('MMM D, YYYY, h:mm:ss a'));
+
+
+function updateTime() {
+  var now = dayjs();
+  $('#headerTime').text(now.format('MMM D, YYYY, h:mm:ss a'));
+}
+
+setInterval(updateTime, 1000);
+
 // function to set the inputs from the modal to local storage
 let submitBtn = $(".btn-under");
 let cuisineVal = [];
