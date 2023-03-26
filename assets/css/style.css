@@ -20,8 +20,6 @@ body {
     background-size: 40%;
     background-repeat: repeat;
     font-family: 'Quicksand', sans-serif;
-    
-
 }
 
 .btn{
@@ -56,8 +54,6 @@ body {
 #vibe-check-box {
     background-color: var(--lyellow);
     color: var(--ddorange);
-    
-
 }
 
 
@@ -116,8 +112,6 @@ header {
 #nap {
     justify-content: flex-end;
     font-size: large;
-    
-    
 }
 
 .locationBox {
@@ -131,6 +125,7 @@ header {
     padding: 10px;
     font-size: 25px
 }
+
 #landing-card-text {
     font-size: 20px;
 }
@@ -278,6 +273,12 @@ text {
     margin: auto;
 }
 
+/* @media screen and (min-width: 370px) {
+    #text2 {
+        background-color: red;
+        
+    }
+} */
 
 
 
