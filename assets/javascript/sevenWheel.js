@@ -1,19 +1,14 @@
 // (RB) GLOBALS FOR YELP API:
 
-var city = localStorage.getItem("Location");
-var cityarr;
+var city = localStorage.getItem("Location").trim();
+city.split(' ').join('%20');
 
-if (city.includes(' ')) {
-    cityarr = city.split(' ');
-}
-else {
-    //need this for modifying url incase more words cities in america have up to 5 words
-    cityarr = [city, '', '', '', '', ''];
-}
+console.log(city);
 
-console.log(cityarr);
+// For Weather API (LAT AND LONG)
+var lat;
+var long;
 
-//parse string value into a variable
 
 
 //Need to link info stored in userInput to this page. Must call on localStorage
@@ -127,7 +122,9 @@ function spin(d) {
 
 
             // HERE WE WILL DO OTHER API CALLS SUCH AS WEATHER AND DAY JS
-
+             GeoLocate(); 
+            //clearWeather();
+             
 
             // MADE THIS TO CLEAR THE FOOD OPTIONS BEFORE CONFETTI CLEARS
             clearFoodOptions();
@@ -200,11 +197,11 @@ function getRandomNumbers() {
 }
 
 
-
+//
 
 
 function getRest(){
-    fetch('https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?location=Los%20Angeles&term=' + winningChoice + '&sort_by=best_match&limit=20', {
+    fetch('https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?location='+ city+'&term=' + winningChoice + '&sort_by=best_match&limit=20', {
         headers: {
             'authorization': "Bearer HHdD8QKXJrbdHE86msNV_mcpTvQokFr_8FsyCI_oYC_TUVuZiPk2tG-CUYZl6n7Ecl0k8qx_spVixJu9_bX2VYwOO4aiFe3Msre6Jbtkj8lehDFRTxgIld-900gbZHYx"
         }
@@ -309,6 +306,55 @@ function clearFoodOptions() {
     
     
 }
+
+function GeoLocate() {
+    fetch('http://api.openweathermap.org/geo/1.0/direct?q=' + city +'&limit=1&appid=7355009108da9226df5bd810ec2a29ae')
+
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+
+            console.log(data);
+
+            lat = JSON.stringify(data[0].lat);
+            long = JSON.stringify(data[0].lon);
+            getWeather();
+        })
+}
+
+function getWeather() {
+    fetch('https://api.openweathermap.org/data/2.5/weather?lat=' + lat + '&lon=' + long +'&appid=7355009108da9226df5bd810ec2a29ae&units=imperial')
+
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+
+            console.log(data);
+
+
+        })
+
+
+
+}
+
+// function getWeather() {
+
+//     fetch('https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={7355009108da9226df5bd810ec2a29ae}', {
+//         headers: {
+//             'authorization': "Bearer HHdD8QKXJrbdHE86msNV_mcpTvQokFr_8FsyCI_oYC_TUVuZiPk2tG-CUYZl6n7Ecl0k8qx_spVixJu9_bX2VYwOO4aiFe3Msre6Jbtkj8lehDFRTxgIld-900gbZHYx"
+//         }
+//     })
+//         .then(function (response) {
+//             return response.json();
+//         })
+//         .then(function (data) { })
+
+
+// }
+
 
 
 
