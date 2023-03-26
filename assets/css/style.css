@@ -220,6 +220,13 @@ text {
   background-color: white;
 }
 
+/* BOX THAT HAS THE WEATHER */
+.weather-words {
+  font-size: 10px;
+}
+
+
+
 /* CONTACT US STUFF */
 
 .contact-header-nothing-else {

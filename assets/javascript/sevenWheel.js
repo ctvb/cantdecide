@@ -353,5 +353,23 @@ function getWeather() {
     })
     .then(function (data) {
       console.log(data);
+
+   var weatherCondition =  data.weather[0].description;
+   var temperature = data.main.temp.toString();
+
+    // Grabs parent element we need to append to
+    var selectdaTab = document.querySelector('.weather-bod');
+
+    // Creates what we need to append 
+
+    var appendMe = document.createElement('h4');
+
+    // fill in dat text 
+      appendMe.textContent = "Conditions are " + weatherCondition + ", with a tempurature of " + temperature +"°F";
+
+    // append element
+      selectdaTab.appendChild(appendMe);
+      
+
     });
 }
