@@ -134,18 +134,18 @@ header {
     background-color: white;
 }
 
-#title-grab{
+#title-grab {
     font-family: 'Pacifico', cursive;
 }
 
-#wheel-grab{
+#wheel-grab {
     font-family: 'Pacifico', cursive;
     font-size: 80px;
     color: var(--ddorange);
 }
 
 /* Credits Page */
-.credits-list{
+.credits-list {
     text-align: center;
     list-style: none;
     margin: space-evenly;
@@ -153,7 +153,7 @@ header {
     padding: 1rem;
 }
 
-.links{
+.links {
     color: var(--ddorange);
     text-decoration: none;
 }
@@ -273,12 +273,54 @@ text {
     margin: auto;
 }
 
-/* @media screen and (min-width: 370px) {
-    #text2 {
-        background-color: red;
-        
+.contact-button {
+    text-align: center;
+}
+
+@media screen and (min-width: 811px) {
+    #enjoy {
+        font-size: small;
     }
-} */
+    #title-grab {
+        font-size: xx-large;
+    }
+    .lead {
+        font-size: small;
+    }
+    .date {
+        font-size: medium;
+    }
+}
+
+@media screen and (max-width: 810px) {
+    #enjoy {
+        font-size: small;
+    }
+    #title-grab {
+        font-size: xx-large;
+    }
+    .lead {
+        font-size: small;
+    }
+    .date {
+        font-size: medium;
+    }
+}
+
+@media screen and (min-width: 375px) {
+    #enjoy {
+        font-size: small;
+    }
+    #title-grab {
+        font-size: x-large;
+    }
+    .lead {
+        font-size: small;
+    }
+    .date {
+        font-size: medium;
+    }
+}
 
 
 
