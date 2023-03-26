@@ -47,7 +47,7 @@ locationBox.on('input', function () {
 
 // Here we need to take in local storage for location
 
-    submitBtn.on("click keypress", function () {
+    submitBtn.on("click", function () {
 
         
         // Puts in stuff for local Storage
