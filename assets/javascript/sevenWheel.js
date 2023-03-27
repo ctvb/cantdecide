@@ -301,10 +301,21 @@ function getRest() {
         cardButton.target = "_blank";
 
         // Append the children to the parent
+        if(!data.businesses[i].price){
         cardBody.appendChild(cardTitle);
         cardBody.appendChild(cardText);
-        cardBody.appendChild(cardPrice);
         cardBody.appendChild(cardButton);
+
+        }
+        else{
+          cardBody.appendChild(cardTitle);
+          cardBody.appendChild(cardText);
+          cardBody.appendChild(cardPrice);
+          cardBody.appendChild(cardButton);
+
+        }
+        
+        
 
         // Append the parent to the grandparent and html
         cardCont.appendChild(cardHeader);
@@ -355,7 +366,7 @@ function getWeather() {
       console.log(data);
 
    var weatherCondition =  data.weather[0].description;
-   var temperature = data.main.temp.toString();
+   var temperature = Math.floor(data.main.temp.toString());
 
     // Grabs parent element we need to append to
     var selectdaTab = document.querySelector('.weather-bod');
