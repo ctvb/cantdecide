@@ -353,23 +353,25 @@ function getWeather() {
     })
     .then(function (data) {
       console.log(data);
-
+  
    var weatherCondition =  data.weather[0].description;
    var temperature = data.main.temp.toString();
 
     // Grabs parent element we need to append to
     var selectdaTab = document.querySelector('.weather-bod');
 
-    // Creates what we need to append 
+      // Check if h4 element already exists
+      var existingH4 = selectdaTab.querySelector('h4');
 
-    var appendMe = document.createElement('h4');
-
-    // fill in dat text 
-      appendMe.textContent = "Conditions are " + weatherCondition + ", with a tempurature of " + temperature +"°F";
-
-    // append element
-      selectdaTab.appendChild(appendMe);
-      
+      if (existingH4) {
+        // If it exists, update the text content
+        existingH4.textContent = "Conditions are " + weatherCondition + ", with a tempurature of " + temperature + "°F";
+      } else {
+        // Otherwise, create a new h4 element and append it
+        var appendMe = document.createElement('h4');
+        appendMe.textContent = "Conditions are " + weatherCondition + ", with a tempurature of " + temperature + "°F";
+        selectdaTab.appendChild(appendMe);
+      }
 
     });
 }
