@@ -3,11 +3,21 @@
 var city = localStorage.getItem("Location").trim();
 city.split(" ").join("%20");
 
-console.log(city);
+// console.log(city);
 
 // For Weather API (LAT AND LONG)
 var lat;
 var long;
+var width; 
+var height;
+if (window.screen.width < 700) {
+  width = 350;
+  height = 350;
+}
+else {
+  width = 500;
+  height = 500;
+}
 
 //Need to link info stored in userInput to this page. Must call on localStorage
 var padding = { top: 20, right: 40, bottom: 0, left: 0 },
@@ -335,7 +345,7 @@ function clearFoodOptions() {
 
 function GeoLocate() {
   fetch(
-    "http://api.openweathermap.org/geo/1.0/direct?q=" +
+    "https://api.openweathermap.org/geo/1.0/direct?q=" +
       city +
       "&limit=1&appid=7355009108da9226df5bd810ec2a29ae"
   )
