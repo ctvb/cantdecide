@@ -307,7 +307,7 @@ function clearFoodOptions() {
 }
 
 function GeoLocate() {
-    fetch('http://api.openweathermap.org/geo/1.0/direct?q=' + city +'&limit=1&appid=7355009108da9226df5bd810ec2a29ae')
+    fetch('https://api.openweathermap.org/geo/1.0/direct?q=' + city +'&limit=1&appid=7355009108da9226df5bd810ec2a29ae')
 
         .then(function (response) {
             return response.json();
