@@ -52,6 +52,26 @@ body {
 #vibe-check-box {
   background-color: var(--lyellow);
   color: #e3510b;
+  border: solid 2px var(--ddorange);
+  font-size: large;
+}
+
+#firstCard{
+  margin-top: -20px;
+  justify-content: center;
+}
+
+/* ALL INPUTS */
+
+
+/* MODAL */
+
+.modal-dialog {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100% - 3.5rem);
+  max-height: 80vh;
 }
 
 /* CARDS */
@@ -64,13 +84,10 @@ header {
   text-align: center;
 }
 
-.card .words {
-  display: inline-block;
-}
-
 .card {
   padding: 10px;
-  margin: 10px;
+  margin: 60px;
+  border-radius: 10px;
 }
 
 .words {
@@ -84,7 +101,7 @@ header {
 #words-background {
   background-color: var(--lyellow);
   border: 2px solid;
-  border-color: var(--dorange);
+  border-color: var(--ddorange);
   border-radius: 10px;
   padding: 20px;
 }
@@ -107,23 +124,28 @@ header {
 }
 
 #nap {
-  justify-content: flex-end;
+  justify-content: center;
   font-size: large;
 }
 
 .locationBox {
-  justify-content: center;
-  width: 190px;
+  text-align: center;
+  width: 14.5rem;
+  height: 3rem;
+  font-size: 30px;
+  
 }
 
 #landing-card-title {
   margin: 10px;
   padding: 10px;
-  font-size: 25px;
+  font-size: 40px;
+  text-align: left;
 }
 
 #landing-card-text {
-  font-size: 20px;
+  font-size: 30px;
+  padding: 25px;
 }
 
 #co {
@@ -184,7 +206,6 @@ text {
 }
 
 #chart {
-  /* position: absolute; */
   width: 500px;
   height: 500px;
   top: 0;
@@ -192,7 +213,6 @@ text {
 }
 
 #question {
-  /* position: absolute; */
   width: 400px;
   height: 500px;
   top: 0;
@@ -276,7 +296,10 @@ text {
   text-align: center;
 }
 
-@media screen and (min-width: 811px) {
+/* Bulma Link */
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
+
+/* @media screen and (min-width: 811px) {
   #enjoy {
     font-size: small;
   }
@@ -321,4 +344,4 @@ text {
   .date {
     font-size: medium;
   }
-}
+} */
