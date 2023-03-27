@@ -28,7 +28,16 @@ On this page the user's food options are populated on a spinning game wheel. The
 It's everything you need to plan a night out!
 
 
-**SCREENSHOTS**
+## Screenshots
+
+![Hero](./assets/images/Hero.png)
+![Input](./assets/images/LocationInput.png)
+![Modal](./assets/images/Modal.png)
+![SpinWheel](./assets/images/SpinWheel.png)
+![Win](./assets/images/Winningchoice.png)
+![Recs](./assets/images/Recs.png)
+![Contact](./assets/images/Contact.png)
+![Credits](./assets/images/Credits.png)
 
 
 ## Credits
