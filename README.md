@@ -1,6 +1,9 @@
 # cantdecide
 "Honey, what do you want for dinner?" 
 
+## Deployed Link
+https://ctvb.github.io/cantdecide/
+
 ## Description
 
 Group Project 1 was inspired by a common experience: Trying to decide what to have for dinner. Whether you're extremely indecisive or looking for new suggestions, CAN'T DECIDE: The Dinner Date Picker is here to help!
